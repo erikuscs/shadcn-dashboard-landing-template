@@ -1,0 +1,105 @@
+{
+  "updatedAt": "2026-03-07T15:00:00Z",
+  "owner": "Marcus Vale",
+  "ownerRole": "Strategy Director",
+  "engagements": [
+    {
+      "id": "eng-001",
+      "client": "Meridian Energy",
+      "sector": "Energy",
+      "contractType": "Retainer",
+      "startDate": "2026-03-01",
+      "status": "active",
+      "phases": [
+        {
+          "phase": 1,
+          "label": "Discovery & Gap Mapping",
+          "days": "1–30",
+          "milestones": [
+            { "week": 1, "task": "Kickoff + stakeholder alignment", "owner": "Marcus Vale", "status": "complete" },
+            { "week": 2, "task": "Critical infrastructure audit scope", "owner": "Anika Rahman", "status": "complete" },
+            { "week": 3, "task": "Regulatory exposure analysis (NERC CIP)", "owner": "Anika Rahman", "status": "in-progress" },
+            { "week": 4, "task": "Gap mapping report delivered", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        },
+        {
+          "phase": 2,
+          "label": "Strategy Build",
+          "days": "31–60",
+          "milestones": [
+            { "week": 5, "task": "Prioritized risk remediation roadmap", "owner": "Marcus Vale", "status": "pending" },
+            { "week": 6, "task": "Vendor & partner evaluation (3 shortlisted)", "owner": "Sofia Mendes", "status": "pending" },
+            { "week": 7, "task": "Budget model + ROI scenario analysis", "owner": "Daniel Cho", "status": "pending" },
+            { "week": 8, "task": "Board-ready strategy deck", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        },
+        {
+          "phase": 3,
+          "label": "Implementation Support",
+          "days": "61–90",
+          "milestones": [
+            { "week": 9, "task": "Pilot program launch (1 facility)", "owner": "Leo Navarro", "status": "pending" },
+            { "week": 10, "task": "Compliance checkpoint + documentation", "owner": "Anika Rahman", "status": "pending" },
+            { "week": 11, "task": "Adjustment cycle + KPI review", "owner": "Marcus Vale", "status": "pending" },
+            { "week": 12, "task": "90-day closeout report + renewal brief", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        }
+      ],
+      "kpis": [
+        { "label": "Gaps Identified", "value": 14, "unit": "items" },
+        { "label": "Risks Mitigated", "value": 3, "unit": "items" },
+        { "label": "Days to Completion", "value": 78, "unit": "days" },
+        { "label": "Deal Value", "value": 185000, "unit": "USD" }
+      ]
+    },
+    {
+      "id": "eng-002",
+      "client": "Harrow Industrial",
+      "sector": "Manufacturing",
+      "contractType": "Project",
+      "startDate": "2026-03-15",
+      "status": "upcoming",
+      "phases": [
+        {
+          "phase": 1,
+          "label": "Discovery & Gap Mapping",
+          "days": "1–30",
+          "milestones": [
+            { "week": 1, "task": "Kickoff + OT/IT boundary mapping", "owner": "Marcus Vale", "status": "pending" },
+            { "week": 2, "task": "Supply chain vulnerability scan", "owner": "Anika Rahman", "status": "pending" },
+            { "week": 3, "task": "CMMC baseline readiness check", "owner": "Anika Rahman", "status": "pending" },
+            { "week": 4, "task": "Discovery report delivered", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        },
+        {
+          "phase": 2,
+          "label": "Strategy Build",
+          "days": "31–60",
+          "milestones": [
+            { "week": 5, "task": "Hardening playbook (3 priority areas)", "owner": "Marcus Vale", "status": "pending" },
+            { "week": 6, "task": "Incident response framework draft", "owner": "Helena Cross", "status": "pending" },
+            { "week": 7, "task": "Staff training plan (GC team)", "owner": "Claire Donovan", "status": "pending" },
+            { "week": 8, "task": "Executive strategy presentation", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        },
+        {
+          "phase": 3,
+          "label": "Implementation Support",
+          "days": "61–90",
+          "milestones": [
+            { "week": 9, "task": "Hardening sprint #1 execution", "owner": "Leo Navarro", "status": "pending" },
+            { "week": 10, "task": "Controls validation testing", "owner": "Anika Rahman", "status": "pending" },
+            { "week": 11, "task": "Final compliance documentation", "owner": "Anika Rahman", "status": "pending" },
+            { "week": 12, "task": "Closeout + expansion scoping", "owner": "Marcus Vale", "status": "pending" }
+          ]
+        }
+      ],
+      "kpis": [
+        { "label": "Gaps Identified", "value": 0, "unit": "items" },
+        { "label": "Risks Mitigated", "value": 0, "unit": "items" },
+        { "label": "Days to Completion", "value": 90, "unit": "days" },
+        { "label": "Deal Value", "value": 95000, "unit": "USD" }
+      ]
+    }
+  ]
+}

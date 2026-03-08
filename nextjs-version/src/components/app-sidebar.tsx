@@ -2,19 +2,13 @@
 
 import * as React from "react"
 import {
-  LayoutPanelLeft,
   LayoutDashboard,
-  Mail,
-  CheckSquare,
-  MessageCircle,
-  Calendar,
-  Shield,
   AlertTriangle,
-  Settings,
-  HelpCircle,
-  CreditCard,
-  LayoutTemplate,
+  Map,
+  KanbanSquare,
   Users,
+  Wrench,
+  Settings,
 } from "lucide-react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
@@ -34,175 +28,48 @@ import {
 
 const data = {
   user: {
-    name: "ShadcnStore",
-    email: "store@example.com",
+    name: "Erik Herring",
+    email: "erik@sustainablegaps.com",
     avatar: "",
   },
   navGroups: [
     {
-      label: "Dashboards",
+      label: "Mission Control",
       items: [
         {
-          title: "Dashboard 1",
+          title: "Overview",
           url: "/dashboard",
           icon: LayoutDashboard,
         },
         {
-          title: "Dashboard 2",
-          url: "/dashboard-2",
-          icon: LayoutPanelLeft,
-        },
-      ],
-    },
-    {
-      label: "Apps",
-      items: [
-        {
-          title: "Mail",
-          url: "/mail",
-          icon: Mail,
+          title: "Intelligence",
+          url: "/intelligence",
+          icon: AlertTriangle,
         },
         {
-          title: "Tasks",
-          url: "/tasks",
-          icon: CheckSquare,
+          title: "Roadmap",
+          url: "/roadmap",
+          icon: Map,
         },
         {
-          title: "Chat",
-          url: "/chat",
-          icon: MessageCircle,
+          title: "Projects",
+          url: "/projects",
+          icon: KanbanSquare,
         },
         {
-          title: "Calendar",
-          url: "/calendar",
-          icon: Calendar,
-        },
-        {
-          title: "Users",
-          url: "/users",
+          title: "Team",
+          url: "/team",
           icon: Users,
         },
-      ],
-    },
-    {
-      label: "Pages",
-      items: [
         {
-          title: "Landing",
-          url: "/landing",
-          target: "_blank",
-          icon: LayoutTemplate,
-        },
-        {
-          title: "Auth Pages",
-          url: "#",
-          icon: Shield,
-          items: [
-            {
-              title: "Sign In 1",
-              url: "/sign-in",
-            },
-            {
-              title: "Sign In 2",
-              url: "/sign-in-2",
-            },
-            {
-              title: "Sign In 3",
-              url: "/sign-in-3",
-            },
-            {
-              title: "Sign Up 1",
-              url: "/sign-up",
-            },
-            {
-              title: "Sign Up 2",
-              url: "/sign-up-2",
-            },
-            {
-              title: "Sign Up 3",
-              url: "/sign-up-3",
-            },
-            {
-              title: "Forgot Password 1",
-              url: "/forgot-password",
-            },
-            {
-              title: "Forgot Password 2",
-              url: "/forgot-password-2",
-            },
-            {
-              title: "Forgot Password 3",
-              url: "/forgot-password-3",
-            }
-          ],
-        },
-        {
-          title: "Errors",
-          url: "#",
-          icon: AlertTriangle,
-          items: [
-            {
-              title: "Unauthorized",
-              url: "/errors/unauthorized",
-            },
-            {
-              title: "Forbidden",
-              url: "/errors/forbidden",
-            },
-            {
-              title: "Not Found",
-              url: "/errors/not-found",
-            },
-            {
-              title: "Internal Server Error",
-              url: "/errors/internal-server-error",
-            },
-            {
-              title: "Under Maintenance",
-              url: "/errors/under-maintenance",
-            },
-          ],
+          title: "Tools",
+          url: "/tools",
+          icon: Wrench,
         },
         {
           title: "Settings",
-          url: "#",
+          url: "/settings",
           icon: Settings,
-          items: [
-            {
-              title: "User Settings",
-              url: "/settings/user",
-            },
-            {
-              title: "Account Settings",
-              url: "/settings/account",
-            },
-            {
-              title: "Plans & Billing",
-              url: "/settings/billing",
-            },
-            {
-              title: "Appearance",
-              url: "/settings/appearance",
-            },
-            {
-              title: "Notifications",
-              url: "/settings/notifications",
-            },
-            {
-              title: "Connections",
-              url: "/settings/connections",
-            },
-          ],
-        },
-        {
-          title: "FAQs",
-          url: "/faqs",
-          icon: HelpCircle,
-        },
-        {
-          title: "Pricing",
-          url: "/pricing",
-          icon: CreditCard,
         },
       ],
     },
@@ -221,8 +88,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <Logo size={24} className="text-current" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">ShadcnStore</span>
-                  <span className="truncate text-xs">Admin Dashboard</span>
+                  <span className="truncate font-medium">Mission Control</span>
+                  <span className="truncate text-xs">Sustainable Gaps</span>
                 </div>
               </Link>
             </SidebarMenuButton>

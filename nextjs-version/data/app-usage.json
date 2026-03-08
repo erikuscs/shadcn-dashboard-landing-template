@@ -1,0 +1,177 @@
+[
+  {
+    "name": "OpenClaw Mission Control",
+    "category": "Operations",
+    "runsPerDay": 132,
+    "successRate": 99.2,
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "name": "OpenBrowser",
+    "category": "Browser",
+    "runsPerDay": 96,
+    "successRate": 98.8,
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "name": "Prompt Studio",
+    "category": "Authoring",
+    "runsPerDay": 88,
+    "successRate": 97.8,
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "name": "Trace Inspector",
+    "category": "Diagnostics",
+    "runsPerDay": 74,
+    "successRate": 98.4,
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "name": "ChatGPT",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926111+00:00"
+  },
+  {
+    "name": "TextEdit",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926397+00:00"
+  },
+  {
+    "name": "Telegram",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926400+00:00"
+  },
+  {
+    "name": "MSTeams",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926402+00:00"
+  },
+  {
+    "name": "Finder",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926403+00:00"
+  },
+  {
+    "name": "Notes",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926405+00:00"
+  },
+  {
+    "name": "GitHub Desktop",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926406+00:00"
+  },
+  {
+    "name": "prl_client_app",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926408+00:00"
+  },
+  {
+    "name": "WinAppHelper",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926409+00:00"
+  },
+  {
+    "name": "Code",
+    "category": "Developer",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926410+00:00"
+  },
+  {
+    "name": "Codex",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926412+00:00"
+  },
+  {
+    "name": "ChatGPT Atlas",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926413+00:00"
+  },
+  {
+    "name": "Docker Desktop",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926415+00:00"
+  },
+  {
+    "name": "Microsoft Outlook",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926416+00:00"
+  },
+  {
+    "name": "Xcode",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926417+00:00"
+  },
+  {
+    "name": "Microsoft Word",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926419+00:00"
+  },
+  {
+    "name": "djay Pro",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926420+00:00"
+  },
+  {
+    "name": "Google Chrome",
+    "category": "Browser",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926422+00:00"
+  },
+  {
+    "name": "DJ.Studio",
+    "category": "General",
+    "runsPerDay": 51,
+    "successRate": 98.51000000000026,
+    "updatedAt": "2026-03-07T12:02:08.926423+00:00"
+  },
+  {
+    "name": "Google Chrome for Testing",
+    "category": "General",
+    "runsPerDay": 46,
+    "successRate": 98.46000000000024,
+    "updatedAt": "2026-03-07T12:02:08.926424+00:00"
+  },
+  {
+    "name": "System Settings",
+    "category": "General",
+    "runsPerDay": 8,
+    "successRate": 98.08000000000004,
+    "updatedAt": "2026-03-07T12:02:08.926426+00:00"
+  }
+]

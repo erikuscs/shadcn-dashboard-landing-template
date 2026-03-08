@@ -1,0 +1,134 @@
+[
+  {
+    "id": "agent-001",
+    "email": "ava.sterling@sustainablegaps.com",
+    "name": "Ava Sterling",
+    "role": "Chief Intelligence Officer",
+    "department": "Command",
+    "manager": "Erik Herring",
+    "workload": 88,
+    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
+    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+  },
+  {
+    "id": "agent-002",
+    "email": "marcus.vale@sustainablegaps.com",
+    "name": "Marcus Vale",
+    "role": "Senior Risk Analyst",
+    "department": "Intelligence",
+    "manager": "Ava Sterling",
+    "workload": 76,
+    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
+    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+  },
+  {
+    "id": "agent-003",
+    "email": "claire.donovan@sustainablegaps.com",
+    "name": "Claire Donovan",
+    "role": "Operations Strategist",
+    "department": "Operations",
+    "manager": "Ava Sterling",
+    "workload": 62,
+    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
+    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+  },
+  {
+    "id": "agent-004",
+    "email": "daniel.cho@sustainablegaps.com",
+    "name": "Daniel Cho",
+    "role": "Financial Intelligence Lead",
+    "department": "Finance",
+    "manager": "Erik Herring",
+    "workload": 71,
+    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
+    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+  },
+  {
+    "id": "agent-005",
+    "email": "riya.nair@sustainablegaps.com",
+    "name": "Riya Nair",
+    "role": "Regulatory Compliance Analyst",
+    "department": "Intelligence",
+    "manager": "Marcus Vale",
+    "workload": 83,
+    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
+    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+  },
+  {
+    "id": "agent-006",
+    "email": "theo.banks@sustainablegaps.com",
+    "name": "Theo Banks",
+    "role": "Client Engagement Director",
+    "department": "Client Success",
+    "manager": "Ava Sterling",
+    "workload": 55,
+    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
+    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+  },
+  {
+    "id": "agent-007",
+    "email": "priya.osei@sustainablegaps.com",
+    "name": "Priya Osei",
+    "role": "Market Signal Analyst",
+    "department": "Intelligence",
+    "manager": "Marcus Vale",
+    "workload": 67,
+    "requiredTools": ["OpenClaw Mission Control"],
+    "grantedTools": ["OpenClaw Mission Control"]
+  },
+  {
+    "id": "agent-008",
+    "email": "leon.marsh@sustainablegaps.com",
+    "name": "Leon Marsh",
+    "role": "Infrastructure Specialist",
+    "department": "Delivery",
+    "manager": "Claire Donovan",
+    "workload": 91,
+    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
+    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+  },
+  {
+    "id": "agent-009",
+    "email": "nina.cross@sustainablegaps.com",
+    "name": "Nina Cross",
+    "role": "KPI Architect",
+    "department": "Intelligence",
+    "manager": "Daniel Cho",
+    "workload": 74,
+    "requiredTools": ["OpenClaw Mission Control"],
+    "grantedTools": ["OpenClaw Mission Control"]
+  },
+  {
+    "id": "agent-010",
+    "email": "sam.ford@sustainablegaps.com",
+    "name": "Sam Ford",
+    "role": "Proposal & Briefing Lead",
+    "department": "Client Success",
+    "manager": "Theo Banks",
+    "workload": 58,
+    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
+    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+  },
+  {
+    "id": "agent-011",
+    "email": "zara.quinn@sustainablegaps.com",
+    "name": "Zara Quinn",
+    "role": "Process Optimization Analyst",
+    "department": "Operations",
+    "manager": "Claire Donovan",
+    "workload": 69,
+    "requiredTools": ["OpenClaw Mission Control"],
+    "grantedTools": ["OpenClaw Mission Control"]
+  },
+  {
+    "id": "agent-012",
+    "email": "eli.torres@sustainablegaps.com",
+    "name": "Eli Torres",
+    "role": "Platform & Tools Engineer",
+    "department": "Platform",
+    "manager": "Erik Herring",
+    "workload": 80,
+    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
+    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+  }
+]

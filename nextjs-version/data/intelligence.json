@@ -1,0 +1,282 @@
+{
+  "signals": [
+    {
+      "id": "sig-001",
+      "timestamp": "2026-03-07T08:15:00Z",
+      "source": "NERC Regulatory Feed",
+      "sector": "Energy",
+      "type": "regulatory",
+      "headline": "NERC CIP-014 amendment proposed \u2014 physical security requirements expanding to facilities under 200MW",
+      "severity": "high",
+      "actionable": true,
+      "status": "actioned",
+      "assignedTo": "marcus.vale",
+      "notes": "Marcus building 90-day readiness plan for affected clients"
+    },
+    {
+      "id": "sig-002",
+      "timestamp": "2026-03-06T14:30:00Z",
+      "source": "LinkedIn / Industry Monitor",
+      "sector": "Manufacturing",
+      "type": "leadership_change",
+      "headline": "VP of Operational Technology at Harrow Industrial replaced \u2014 new hire from cybersecurity background",
+      "severity": "medium",
+      "actionable": true,
+      "status": "reviewed",
+      "assignedTo": "sofia.mendes",
+      "notes": "New OT-focused leadership signals purchasing intent \u2014 Sofia to initiate contact"
+    },
+    {
+      "id": "sig-003",
+      "timestamp": "2026-03-06T09:00:00Z",
+      "source": "ICS-CERT Advisory",
+      "sector": "Energy",
+      "type": "threat",
+      "headline": "Active exploitation of Siemens SCADA firmware CVE-2025-8812 confirmed in two US utilities",
+      "severity": "critical",
+      "actionable": true,
+      "status": "actioned",
+      "assignedTo": "anika.rahman",
+      "notes": "Anika added to risk register for Meridian Energy engagement"
+    },
+    {
+      "id": "sig-004",
+      "timestamp": "2026-03-05T16:45:00Z",
+      "source": "SEC EDGAR Filing Monitor",
+      "sector": "Manufacturing",
+      "type": "growth",
+      "headline": "Consolidated Steel Partners files 10-Q citing infrastructure hardening as strategic priority \u2014 $4.2M budget allocated",
+      "severity": "high",
+      "actionable": true,
+      "status": "new",
+      "assignedTo": null,
+      "notes": ""
+    },
+    {
+      "id": "sig-005",
+      "timestamp": "2026-03-05T11:00:00Z",
+      "source": "DOE Grid Security Report",
+      "sector": "Energy",
+      "type": "regulatory",
+      "headline": "DOE publishes updated grid hardening framework \u2014 18-month compliance window for bulk power system operators",
+      "severity": "medium",
+      "actionable": false,
+      "status": "monitored",
+      "assignedTo": "helena.cross",
+      "notes": "Monitoring for client-specific impact assessment"
+    },
+    {
+      "id": "sig-006",
+      "timestamp": "2026-03-04T08:30:00Z",
+      "source": "Industry Conference Feed",
+      "sector": "Manufacturing",
+      "type": "market",
+      "headline": "ARC Advisory Group: 67% of MFG GCs plan OT security investment increase in 2026 \u2014 average budget up 34%",
+      "severity": "low",
+      "actionable": false,
+      "status": "monitored",
+      "assignedTo": null,
+      "notes": ""
+    }
+  ],
+  "fitScores": [
+    {
+      "engagementId": "eng-001",
+      "client": "Meridian Energy GC",
+      "sector": "Energy",
+      "scoreDate": "2026-03-06T00:00:00Z",
+      "overallFitScore": 54,
+      "areas": [
+        {
+          "area": "Physical Security",
+          "state": "current",
+          "score": 65,
+          "target": 85
+        },
+        {
+          "area": "Cyber OT / SCADA",
+          "state": "beginning",
+          "score": 28,
+          "target": 75
+        },
+        {
+          "area": "Incident Response",
+          "state": "current",
+          "score": 55,
+          "target": 80
+        },
+        {
+          "area": "Supply Chain Risk",
+          "state": "beginning",
+          "score": 18,
+          "target": 70
+        },
+        {
+          "area": "Regulatory Compliance",
+          "state": "desired",
+          "score": 82,
+          "target": 90
+        }
+      ]
+    },
+    {
+      "engagementId": "eng-002",
+      "client": "Harrow Industrial GC",
+      "sector": "Manufacturing",
+      "scoreDate": "2026-03-01T00:00:00Z",
+      "overallFitScore": 41,
+      "areas": [
+        {
+          "area": "Physical Security",
+          "state": "current",
+          "score": 60,
+          "target": 85
+        },
+        {
+          "area": "Cyber OT / SCADA",
+          "state": "beginning",
+          "score": 22,
+          "target": 75
+        },
+        {
+          "area": "Incident Response",
+          "state": "beginning",
+          "score": 30,
+          "target": 80
+        },
+        {
+          "area": "Supply Chain Risk",
+          "state": "beginning",
+          "score": 25,
+          "target": 70
+        },
+        {
+          "area": "Regulatory Compliance",
+          "state": "current",
+          "score": 68,
+          "target": 90
+        }
+      ]
+    }
+  ],
+  "riskRegister": [
+    {
+      "id": "risk-001",
+      "title": "No OT network segmentation at primary generation site",
+      "severity": "critical",
+      "category": "Cyber OT",
+      "client": "Meridian Energy GC",
+      "openedAt": "2026-03-05T00:00:00Z",
+      "targetCloseDate": "2026-03-19T00:00:00Z",
+      "status": "open",
+      "owner": "anika.rahman",
+      "mitigationPlan": "Engage vendor for micro-segmentation assessment \u2014 Fortinet preferred"
+    },
+    {
+      "id": "risk-002",
+      "title": "Siemens SCADA firmware CVE-2025-8812 unpatched on 3 control nodes",
+      "severity": "critical",
+      "category": "Cyber OT",
+      "client": "Meridian Energy GC",
+      "openedAt": "2026-03-06T00:00:00Z",
+      "targetCloseDate": "2026-03-13T00:00:00Z",
+      "status": "open",
+      "owner": "anika.rahman",
+      "mitigationPlan": "Emergency patch window scheduled for 2026-03-09 maintenance window"
+    },
+    {
+      "id": "risk-003",
+      "title": "No documented incident response plan for OT environment",
+      "severity": "high",
+      "category": "Incident Response",
+      "client": "Meridian Energy GC",
+      "openedAt": "2026-03-01T00:00:00Z",
+      "targetCloseDate": "2026-03-31T00:00:00Z",
+      "status": "in_progress",
+      "owner": "anika.rahman",
+      "mitigationPlan": "Marcus drafting OT IR playbook \u2014 first draft due 2026-03-15"
+    },
+    {
+      "id": "risk-004",
+      "title": "Single-vendor supply chain dependency for control components",
+      "severity": "high",
+      "category": "Supply Chain",
+      "client": "Harrow Industrial GC",
+      "openedAt": "2026-03-01T00:00:00Z",
+      "targetCloseDate": "2026-04-01T00:00:00Z",
+      "status": "open",
+      "owner": "anika.rahman",
+      "mitigationPlan": "Sofia identifying approved alternate vendors \u2014 procurement review in progress"
+    },
+    {
+      "id": "risk-005",
+      "title": "Physical access logs not integrated with security monitoring",
+      "severity": "medium",
+      "category": "Physical Security",
+      "client": "Harrow Industrial GC",
+      "openedAt": "2026-02-28T00:00:00Z",
+      "targetCloseDate": "2026-03-28T00:00:00Z",
+      "status": "in_progress",
+      "owner": "arjun.patel",
+      "mitigationPlan": "Arjun integrating physical access system with SIEM \u2014 60% complete"
+    }
+  ],
+  "pipeline": [
+    {
+      "id": "pipe-001",
+      "client": "Meridian Energy GC",
+      "sector": "Energy",
+      "stage": "engaged",
+      "valueUsd": 185000,
+      "enteredAt": "2026-02-01T00:00:00Z",
+      "lastActivity": "2026-03-06T00:00:00Z",
+      "owner": "sofia.mendes",
+      "notes": "Active engagement \u2014 Q1 hardening assessment underway"
+    },
+    {
+      "id": "pipe-002",
+      "client": "Harrow Industrial GC",
+      "sector": "Manufacturing",
+      "stage": "proposal",
+      "valueUsd": 142000,
+      "enteredAt": "2026-02-15T00:00:00Z",
+      "lastActivity": "2026-03-05T00:00:00Z",
+      "owner": "sofia.mendes",
+      "notes": "Proposal delivered 2026-03-01, awaiting new OT VP review"
+    },
+    {
+      "id": "pipe-003",
+      "client": "Consolidated Steel Partners",
+      "sector": "Manufacturing",
+      "stage": "qualified",
+      "valueUsd": 220000,
+      "enteredAt": "2026-03-05T00:00:00Z",
+      "lastActivity": "2026-03-07T00:00:00Z",
+      "owner": "sofia.mendes",
+      "notes": "Identified via SEC filing signal \u2014 Helena flagged, Sofia making first contact"
+    },
+    {
+      "id": "pipe-004",
+      "client": "Apex Power Cooperative",
+      "sector": "Energy",
+      "stage": "prospect",
+      "valueUsd": 95000,
+      "enteredAt": "2026-03-03T00:00:00Z",
+      "lastActivity": "2026-03-03T00:00:00Z",
+      "owner": "sofia.mendes",
+      "notes": "Referred by Meridian GC \u2014 intro call not yet scheduled"
+    },
+    {
+      "id": "pipe-005",
+      "client": "Lakeshore Fabrication",
+      "sector": "Manufacturing",
+      "stage": "prospect",
+      "valueUsd": 78000,
+      "enteredAt": "2026-02-20T00:00:00Z",
+      "lastActivity": "2026-02-22T00:00:00Z",
+      "owner": "sofia.mendes",
+      "notes": "Cold outreach \u2014 no response after 2 attempts"
+    }
+  ],
+  "updatedAt": "2026-03-07T14:00:00Z"
+}

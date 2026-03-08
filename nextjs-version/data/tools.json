@@ -1,0 +1,122 @@
+[
+  {
+    "id": "executive-filter",
+    "name": "Executive Filter",
+    "owner": "Ava Sterling",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Routes all agent outputs to Erik. Categorizes: Immediate Decision / Strategic Review / Monitor / Delegate.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": "2026-03-07T13:05:04.488828Z"
+  },
+  {
+    "id": "intelligence-scanner",
+    "name": "Intelligence Scanner",
+    "owner": "Helena Cross",
+    "state": "Live",
+    "trigger": "schedule",
+    "notes": "Sector scanning \u2014 Manufacturing & Energy GC firms. Detects growth signals, regulatory shifts, leadership changes.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "fit-gap-scorer",
+    "name": "Fit & Gap Scorer",
+    "owner": "Elias Romero",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Applies hardening fit score. Computes 3-State Gap Model: Beginning / Current / Desired state.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "risk-analyst",
+    "name": "Risk Analyst",
+    "owner": "Anika Rahman",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Classifies exposure categories. Defensive modeling only. Produces risk register and mitigation plan.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "strategy-director",
+    "name": "Strategy Director",
+    "owner": "Marcus Vale",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Converts intelligence into strategic roadmaps. Produces 90-day engagement plans and executive briefs.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "financial-analyst",
+    "name": "Financial Analyst",
+    "owner": "Daniel Cho",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Models cost justification, forecasts premium impact, margin preservation. No narrative \u2014 numbers only.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "partnership-director",
+    "name": "Partnership Director",
+    "owner": "Sofia Mendes",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Identifies strategic partners: ballistic wall, security integrators, engineering adjacency, insurance leverage.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "decision-integrity",
+    "name": "Decision Integrity Auditor",
+    "owner": "Claire Donovan",
+    "state": "Live",
+    "trigger": "webhook",
+    "notes": "Logs every override. Compares system vs human decisions. Detects bias drift. Triggers review sessions.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "capacity-monitor",
+    "name": "Capacity Monitor",
+    "owner": "Leo Navarro",
+    "state": "Live",
+    "trigger": "schedule",
+    "notes": "Tracks engagement load, flags burnout risk, blocks new activations when overload detected.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "hr-onboarding",
+    "name": "HR Onboarding",
+    "owner": "Nora Bennett",
+    "state": "Live",
+    "trigger": "manual",
+    "notes": "Manages staff onboarding from CSV. Ensures IT and HR accounts exist before provisioning mailboxes.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": "2026-03-07T13:05:04.488828Z"
+  },
+  {
+    "id": "devops-integrity",
+    "name": "DevOps & Data Integrity",
+    "owner": "Arjun Patel",
+    "state": "Live",
+    "trigger": "schedule",
+    "notes": "Maintains PostgreSQL schema, validates CI/CD, monitors audit log integrity. Enforces schema discipline.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  },
+  {
+    "id": "sg-decision-api",
+    "name": "SG Decision & Audit API",
+    "owner": "Arjun Patel",
+    "state": "Beta",
+    "trigger": "webhook",
+    "notes": "Azure Functions API: POST /api/decisions, GET /api/review-queue. PostgreSQL backed with Zod validation.",
+    "createdAt": "2026-03-07T13:05:04.488828Z",
+    "lastRunAt": null
+  }
+]
