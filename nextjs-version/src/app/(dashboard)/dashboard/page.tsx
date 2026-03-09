@@ -119,6 +119,7 @@ export default async function OverviewPage() {
     sector: f.sector,
     overallScore: f.overallFitScore,
     delta: 0,
+    areas: f.areas,
   }))
 
   // Open risks for table
