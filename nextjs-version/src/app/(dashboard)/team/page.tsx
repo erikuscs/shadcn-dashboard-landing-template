@@ -169,8 +169,12 @@ export default function TeamPageClient() {
                     <p className="text-xs text-muted-foreground truncate">{m.role}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <Badge variant="outline" className="text-xs">{m.department}</Badge>
-                      {m.workload >= 80 && <Badge variant="secondary" className="text-xs text-amber-700 bg-amber-100">High load</Badge>}
+                      {m.status === "new_hire" && <Badge className="text-xs bg-blue-100 text-blue-700 hover:bg-blue-100">🆕 New Hire</Badge>}
+                      {m.workload >= 80 && m.status !== "new_hire" && <Badge variant="secondary" className="text-xs text-amber-700 bg-amber-100">High load</Badge>}
                     </div>
+                    {m.status === "new_hire" && m.startDate && (
+                      <p className="text-xs text-blue-600 mt-1">Starts {new Date(m.startDate).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</p>
+                    )}
                     <div className="mt-2">
                       <div className="h-1.5 w-full rounded-full bg-muted overflow-hidden">
                         <div className={`h-full rounded-full ${workloadBg(m.workload)}`} style={{ width: `${m.workload}%` }} />

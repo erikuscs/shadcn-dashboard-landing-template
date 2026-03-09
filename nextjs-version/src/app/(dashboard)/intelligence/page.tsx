@@ -119,6 +119,20 @@ function SignalRow({ signal, onUpdate }: { signal: IntelligenceSignal; onUpdate:
                   </Button>
                 ))}
               </div>
+              <div className="mt-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="h-7 gap-1 text-xs"
+                  onClick={() => {
+                    const query = encodeURIComponent(signal.headline + " " + signal.sector)
+                    window.open(`https://www.google.com/search?q=${query}`, "_blank", "noopener,noreferrer")
+                  }}
+                >
+                  <Search className="h-3 w-3" />
+                  Search Web for This Signal
+                </Button>
+              </div>
             </div>
           </TableCell>
         </TableRow>

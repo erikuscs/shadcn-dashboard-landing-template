@@ -9,6 +9,12 @@ import {
   Users,
   Wrench,
   Settings,
+  Building2,
+  ClipboardList,
+  Server,
+  Handshake,
+  GitBranch,
+  Zap,
 } from "lucide-react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
@@ -60,6 +66,36 @@ const data = {
           title: "Team",
           url: "/team",
           icon: Users,
+        },
+        {
+          title: "Clients",
+          url: "/clients",
+          icon: Handshake,
+        },
+        {
+          title: "CRM",
+          url: "/crm",
+          icon: Building2,
+        },
+        {
+          title: "Decisions",
+          url: "/decisions",
+          icon: ClipboardList,
+        },
+        {
+          title: "Infrastructure",
+          url: "/infrastructure",
+          icon: Server,
+        },
+        {
+          title: "Diagrams",
+          url: "/diagrams",
+          icon: GitBranch,
+        },
+        {
+          title: "Token & Tools",
+          url: "/token-usage",
+          icon: Zap,
         },
         {
           title: "Tools",

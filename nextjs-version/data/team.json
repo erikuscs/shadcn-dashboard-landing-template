@@ -7,8 +7,20 @@
     "department": "Command",
     "manager": "Erik Herring",
     "workload": 88,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "Microsoft Graph API",
+      "Telegram"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "Microsoft Graph API",
+      "Telegram"
+    ]
   },
   {
     "id": "agent-002",
@@ -18,8 +30,18 @@
     "department": "Intelligence",
     "manager": "Ava Sterling",
     "workload": 76,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Prompt Studio",
+      "OpenBrowser"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Prompt Studio",
+      "OpenBrowser"
+    ]
   },
   {
     "id": "agent-003",
@@ -29,8 +51,16 @@
     "department": "Operations",
     "manager": "Ava Sterling",
     "workload": 62,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-004",
@@ -40,8 +70,18 @@
     "department": "Finance",
     "manager": "Erik Herring",
     "workload": 71,
-    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Outlook",
+      "Excel",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Outlook",
+      "Excel",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-005",
@@ -51,8 +91,18 @@
     "department": "Intelligence",
     "manager": "Marcus Vale",
     "workload": 83,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "OpenBrowser",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "OpenBrowser",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-006",
@@ -62,8 +112,18 @@
     "department": "Client Success",
     "manager": "Ava Sterling",
     "workload": 55,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "OpenBrowser"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "OpenBrowser"
+    ]
   },
   {
     "id": "agent-007",
@@ -73,8 +133,16 @@
     "department": "Intelligence",
     "manager": "Marcus Vale",
     "workload": 67,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "OpenBrowser",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "OpenBrowser",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-008",
@@ -84,8 +152,18 @@
     "department": "Delivery",
     "manager": "Claire Donovan",
     "workload": 91,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Trace Inspector",
+      "OpenBrowser"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Trace Inspector",
+      "OpenBrowser"
+    ]
   },
   {
     "id": "agent-009",
@@ -95,8 +173,16 @@
     "department": "Intelligence",
     "manager": "Daniel Cho",
     "workload": 74,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Prompt Studio",
+      "Excel"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Prompt Studio",
+      "Excel"
+    ]
   },
   {
     "id": "agent-010",
@@ -106,8 +192,16 @@
     "department": "Client Success",
     "manager": "Theo Banks",
     "workload": 58,
-    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Outlook",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Outlook",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-011",
@@ -117,8 +211,14 @@
     "department": "Operations",
     "manager": "Claire Donovan",
     "workload": 69,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Prompt Studio"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Prompt Studio"
+    ]
   },
   {
     "id": "agent-012",
@@ -128,7 +228,109 @@
     "department": "Platform",
     "manager": "Erik Herring",
     "workload": 80,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "GitHub Copilot",
+      "Trace Inspector"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "GitHub Copilot",
+      "Trace Inspector"
+    ]
+  },
+  {
+    "id": "agent-013",
+    "email": "jordan.price@sustainablegaps.com",
+    "name": "Jordan Price",
+    "role": "Junior Infrastructure Analyst",
+    "department": "Delivery",
+    "manager": "Leon Marsh",
+    "workload": 40,
+    "status": "new_hire",
+    "startDate": "2026-04-01",
+    "hireReason": "Leon Marsh at 91% capacity. Supports site assessments, gap mapping documentation, and infrastructure data entry.",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Trace Inspector"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "Trace Inspector"
+    ]
+  },
+  {
+    "id": "agent-014",
+    "email": "morgan.reyes@sustainablegaps.com",
+    "name": "Morgan Reyes",
+    "role": "Executive Operations Coordinator",
+    "department": "Command",
+    "manager": "Ava Sterling",
+    "workload": 35,
+    "status": "new_hire",
+    "startDate": "2026-04-01",
+    "hireReason": "Ava Sterling at 88% capacity. Handles scheduling, briefing prep, staff communication routing, and Teams channel management.",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "Microsoft Graph API"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook",
+      "Microsoft Graph API"
+    ]
+  },
+  {
+    "id": "agent-015",
+    "email": "casey.odum@sustainablegaps.com",
+    "name": "Casey Odum",
+    "role": "Junior Compliance Analyst",
+    "department": "Intelligence",
+    "manager": "Riya Nair",
+    "workload": 38,
+    "status": "new_hire",
+    "startDate": "2026-04-07",
+    "hireReason": "Riya Nair at 83% capacity. Supports regulatory signal monitoring, NERC/OSHA/CFATS documentation, and compliance calendar tracking.",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "OpenBrowser"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register",
+      "OpenBrowser"
+    ]
+  },
+  {
+    "id": "agent-016",
+    "email": "drew.santos@sustainablegaps.com",
+    "name": "Drew Santos",
+    "role": "Junior Platform Engineer",
+    "department": "Platform",
+    "manager": "Eli Torres",
+    "workload": 35,
+    "status": "new_hire",
+    "startDate": "2026-04-07",
+    "hireReason": "Eli Torres at 80% capacity. Supports dashboard maintenance, API integrations, deployment pipeline, and tooling improvements.",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "GitHub Copilot",
+      "Trace Inspector"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "GitHub Copilot",
+      "Trace Inspector"
+    ]
   }
 ]

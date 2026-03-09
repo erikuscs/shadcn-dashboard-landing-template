@@ -42,6 +42,9 @@ export type TeamMember = {
   workload: number;
   requiredTools: string[];
   grantedTools: string[];
+  status?: string;
+  startDate?: string;
+  hireReason?: string;
 };
 
 export type BenchmarkKpi = {
@@ -492,4 +495,113 @@ export async function readOutcomes() {
 
 export async function writeOutcomes(data: { updatedAt: string; outcomes: EngagementOutcome[] }) {
   await fs.writeFile(outcomesPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+}
+
+// ── CRM Types ──────────────────────────────────────────────────────
+export type CrmCompanyStatus = "identified" | "researched" | "contacted" | "qualified" | "converted" | "disqualified"
+
+export type CrmCompany = {
+  id: string
+  name: string
+  website: string
+  sector: string
+  marketSegment: string
+  employees: number
+  annualRevenueUsd: number
+  trailingSecuritySpendUsd: number
+  hq: string
+  regulatoryExposure: string[]
+  status: CrmCompanyStatus
+  fitScore: number
+  source: string
+  sourceKeywords: string[]
+  notes: string
+  assignedTo: string | null
+  createdAt: string
+  updatedAt: string
+  tags: string[]
+}
+
+export type CrmContactStatus = "identified" | "researched" | "contacted" | "qualified" | "converted"
+export type CrmInfluenceLevel = "low" | "medium" | "high" | "decision"
+export type CrmRoleType = "technical" | "executive" | "financial" | "champion" | "blocker"
+
+export type CrmContact = {
+  id: string
+  companyId: string
+  name: string
+  title: string
+  email: string | null
+  phone: string | null
+  linkedin: string | null
+  roleType: CrmRoleType
+  isDecisionMaker: boolean
+  influenceLevel: CrmInfluenceLevel
+  lastContactDate: string | null
+  notes: string
+  status: CrmContactStatus
+  createdAt: string
+}
+
+// ── CRM Paths ──────────────────────────────────────────────────────
+const crmCompaniesPath = path.join(dataDir, "crm-companies.json")
+const crmContactsPath = path.join(dataDir, "crm-contacts.json")
+
+// ── CRM Read/Write ─────────────────────────────────────────────────
+export async function readCrmCompanies() {
+  await ensureFile(crmCompaniesPath, '{"updatedAt":"","companies":[]}\n')
+  const raw = await fs.readFile(crmCompaniesPath, "utf8")
+  return JSON.parse(raw) as { updatedAt: string; companies: CrmCompany[] }
+}
+
+export async function writeCrmCompanies(data: { updatedAt: string; companies: CrmCompany[] }) {
+  await fs.writeFile(crmCompaniesPath, `${JSON.stringify(data, null, 2)}\n`, "utf8")
+}
+
+export async function readCrmContacts() {
+  await ensureFile(crmContactsPath, '{"updatedAt":"","contacts":[]}\n')
+  const raw = await fs.readFile(crmContactsPath, "utf8")
+  return JSON.parse(raw) as { updatedAt: string; contacts: CrmContact[] }
+}
+
+export async function writeCrmContacts(data: { updatedAt: string; contacts: CrmContact[] }) {
+  await fs.writeFile(crmContactsPath, `${JSON.stringify(data, null, 2)}\n`, "utf8")
+}
+
+// ── Token Usage Types ──────────────────────────────────────────────
+export type TokenUsageRecord = {
+  memberId: string
+  memberName: string
+  department: string
+  model: string
+  tokensInputK: number
+  tokensOutputK: number
+  costUsd: number
+  sessions: number
+  avgSessionTokens: number
+  primaryUseCase: string
+  toolsUsed: string[]
+  complianceFlag: string | null
+  lastActivity: string | null
+}
+
+export type TokenUsageData = {
+  updatedAt: string
+  billingPeriod: string
+  budgetUsd: number
+  records: TokenUsageRecord[]
+}
+
+// ── Token Usage Path ───────────────────────────────────────────────
+const tokenUsagePath = path.join(dataDir, "token-usage.json")
+
+// ── Token Usage Read/Write ─────────────────────────────────────────
+export async function readTokenUsage() {
+  await ensureFile(tokenUsagePath, '{"updatedAt":"","billingPeriod":"","budgetUsd":0,"records":[]}\n')
+  const raw = await fs.readFile(tokenUsagePath, "utf8")
+  return JSON.parse(raw) as TokenUsageData
+}
+
+export async function writeTokenUsage(data: TokenUsageData) {
+  await fs.writeFile(tokenUsagePath, `${JSON.stringify(data, null, 2)}\n`, "utf8")
 }

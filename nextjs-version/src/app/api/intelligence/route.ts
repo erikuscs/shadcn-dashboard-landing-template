@@ -45,3 +45,12 @@ export async function PATCH(request: Request) {
   await writeIntelligence(data);
   return NextResponse.json(data);
 }
+
+export async function POST(request: Request) {
+  const payload = await request.json();
+  const data = await readIntelligence();
+  data.signals.push(payload);
+  data.updatedAt = new Date().toISOString();
+  await writeIntelligence(data);
+  return NextResponse.json(payload, { status: 201 });
+}

@@ -1,4 +1,4 @@
-import { readIntelligence, readTeamMembers } from "@/lib/mission-store"
+import { readIntelligence, readTeamMembers, readClients, readDecisions } from "@/lib/mission-store"
 import { MetricsOverview } from "./components/metrics-overview"
 import type { MetricCard } from "./components/metrics-overview"
 import { QuickActions } from "./components/quick-actions"
@@ -11,6 +11,8 @@ import { ClientIntelligence } from "./components/client-intelligence"
 export default async function OverviewPage() {
   const intel = await readIntelligence()
   const team = await readTeamMembers()
+  const clientsData = await readClients()
+  const decisionsData = await readDecisions()
 
   // KPI metrics
   const openSignals = intel.signals.filter((s) => s.status !== "actioned").length
@@ -19,7 +21,11 @@ export default async function OverviewPage() {
   const avgWorkload = team.length > 0
     ? Math.round(team.reduce((sum, m) => sum + m.workload, 0) / team.length)
     : 0
-  const overloadedCount = team.filter((m) => m.workload > 80).length
+  const overloadedCount = team.filter((m) => m.workload > 80 && m.status !== "new_hire").length
+  const newHires = team.filter((m) => m.status === "new_hire").length
+  const activeClients = clientsData.clients.filter((c) => ["active", "engaged"].includes(c.status)).length
+  const totalClientValue = clientsData.clients.reduce((s, c) => s + (c.contractValueUsd ?? 0), 0)
+  const pendingDecisions = decisionsData.decisions.filter((d) => d.outcome === "pending").length
 
   const metrics: MetricCard[] = [
     {
@@ -43,6 +49,16 @@ export default async function OverviewPage() {
       icon: "chart",
     },
     {
+      title: "Active Clients",
+      value: String(activeClients),
+      description: "Engaged or active engagements",
+      change: `$${(totalClientValue / 1_000_000).toFixed(1)}M contracted`,
+      trend: "up",
+      footer: `${clientsData.clients.length} total clients in system`,
+      subfooter: "Active + engaged engagements",
+      icon: "dollar",
+    },
+    {
       title: "Pipeline Value",
       value: `$${(totalRevenue / 1_000_000).toFixed(1)}M`,
       description: "Total opportunity value",
@@ -58,9 +74,19 @@ export default async function OverviewPage() {
       description: "Average team workload",
       change: overloadedCount > 0 ? `${overloadedCount} overloaded` : "Balanced",
       trend: overloadedCount > 2 ? "up" : "down",
-      footer: overloadedCount > 0 ? `${overloadedCount} member(s) above 80%` : "Team capacity healthy",
+      footer: newHires > 0 ? `${newHires} new hire(s) onboarding` : "Team capacity healthy",
       subfooter: `${team.length} team members tracked`,
       icon: "users",
+    },
+    {
+      title: "Pending Decisions",
+      value: String(pendingDecisions),
+      description: "Decisions awaiting outcome",
+      change: pendingDecisions > 2 ? "Review needed" : "On track",
+      trend: pendingDecisions > 2 ? "up" : "stable",
+      footer: `${decisionsData.decisions.length} total decisions logged`,
+      subfooter: "Decisions with pending outcome",
+      icon: "chart",
     },
   ]
 
