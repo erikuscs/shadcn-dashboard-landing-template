@@ -92,7 +92,7 @@ export function FAQList({ faqs, categories }: FAQListProps) {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ScrollArea className="h-[570px] pr-4">
+            <ScrollArea className="h-142.5 pr-4">
               {filteredFaqs.length === 0 ? (
                 <div className="text-center py-8 text-muted-foreground">
                   <p>No FAQs found matching your search criteria.</p>

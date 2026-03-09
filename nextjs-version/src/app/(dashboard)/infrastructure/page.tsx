@@ -175,12 +175,12 @@ export default function InfrastructurePage() {
       </div>
 
       <div className="flex gap-3 flex-wrap">
-        <div className="relative flex-1 min-w-[200px]">
+        <div className="relative flex-1 min-w-50">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input className="pl-8" placeholder="Search sites..." value={search} onChange={e => setSearch(e.target.value)} />
         </div>
         <Select value={statusFilter} onValueChange={setStatusFilter}>
-          <SelectTrigger className="w-[170px]"><SelectValue placeholder="Assessment Status" /></SelectTrigger>
+          <SelectTrigger className="w-42.5"><SelectValue placeholder="Assessment Status" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Statuses</SelectItem>
             <SelectItem value="in_progress">In Progress</SelectItem>

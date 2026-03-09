@@ -119,7 +119,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
         </div>
 
         {/* Calendar Grid */}
-        <div className="grid grid-cols-7 min-h-[600px]">
+        <div className="grid grid-cols-7 min-h-150">
           {calendarDays.map((day) => {
             const dayEvents = getEventsForDay(day)
             const isCurrentMonth = isSameMonth(day, currentDate)
@@ -130,7 +130,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
               <div
                 key={day.toISOString()}
                 className={cn(
-                  "relative border-r border-b last:border-r-0 p-2 min-h-[120px] hover:bg-muted/50 cursor-pointer transition-colors",
+                  "relative border-r border-b last:border-r-0 p-2 min-h-30 hover:bg-muted/50 cursor-pointer transition-colors",
                   !isCurrentMonth && "text-muted-foreground bg-muted/20",
                   isDayToday && "bg-blue-50 dark:bg-blue-900/20",
                   isSelected && "bg-blue-100 dark:bg-blue-800/30"
@@ -225,7 +225,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
 
   return (
     <div className="border rounded-lg bg-background relative">
-      <div className="flex min-h-[800px]">
+      <div className="flex min-h-200">
         {/* Desktop Sidebar */}
         <div className="hidden xl:block w-80 flex-shrink-0">
           {renderSidebar()}
@@ -252,7 +252,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
                   <Button variant="ghost" size="sm" onClick={() => navigateMonth("prev")}>
                     <ChevronLeft className="h-4 w-4" />
                   </Button>
-                  <h2 className="text-lg font-semibold min-w-[140px] text-center">
+                  <h2 className="text-lg font-semibold min-w-35 text-center">
                     {format(currentDate, 'MMMM yyyy')}
                   </h2>
                   <Button variant="ghost" size="sm" onClick={() => navigateMonth("next")}>

@@ -61,7 +61,7 @@ export function SalesChart() {
       </CardHeader>
       <CardContent className="p-0 pt-6">
         <div className="px-6 pb-6">
-          <ChartContainer config={chartConfig} className="h-[350px] w-full">
+          <ChartContainer config={chartConfig} className="h-87.5 w-full">
             <AreaChart data={salesData} margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">

@@ -334,7 +334,7 @@ export default function UserSettingsPage() {
                   <FormControl>
                     <Textarea 
                       placeholder="Tell us a little about yourself..." 
-                      className="min-h-[100px]"
+                      className="min-h-25"
                       {...field}
                     />
                   </FormControl>

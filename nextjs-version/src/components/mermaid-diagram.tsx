@@ -101,7 +101,7 @@ export function MermaidDiagram({ chart, className = "" }: MermaidDiagramProps) {
         </div>
       )}
       <div
-        className="overflow-auto rounded-md bg-background p-4 min-h-[200px]"
+        className="overflow-auto rounded-md bg-background p-4 min-h-50"
         style={{ cursor: "grab" }}
       >
         <div

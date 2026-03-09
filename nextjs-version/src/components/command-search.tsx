@@ -62,7 +62,7 @@ const CommandList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
     ref={ref}
-    className={cn("max-h-[400px] overflow-y-auto overflow-x-hidden pb-2", className)}
+    className={cn("max-h-100 overflow-y-auto overflow-x-hidden pb-2", className)}
     {...props}
   />
 ))
@@ -189,7 +189,7 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="overflow-hidden p-0 shadow-2xl border border-zinc-200 dark:border-zinc-800 max-w-[640px]">
+      <DialogContent className="overflow-hidden p-0 shadow-2xl border border-zinc-200 dark:border-zinc-800 max-w-160">
         <DialogTitle className="sr-only">Command Search</DialogTitle>
         <Command
           ref={commandRef}

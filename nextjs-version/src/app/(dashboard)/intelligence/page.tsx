@@ -527,7 +527,7 @@ export default function IntelligencePage() {
                 <CardHeader className="pb-2">
                   <div className="flex items-start justify-between gap-2">
                     <CardTitle className="text-base">{p.name}</CardTitle>
-                    <div className="flex gap-2 flex-shrink-0">
+                    <div className="flex gap-2 shrink-0">
                       <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${strengthColor[p.strength] ?? ""}`}>{p.strength}</span>
                       <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[p.status] ?? ""}`}>{p.status}</span>
                     </div>
@@ -577,7 +577,7 @@ export default function IntelligencePage() {
                       <CardTitle className="text-base">{o.name}</CardTitle>
                       <CardDescription className="text-xs mt-0.5">{o.sector} · {o.type.replace("_", " ")}</CardDescription>
                     </div>
-                    <div className="flex gap-2 flex-shrink-0">
+                    <div className="flex gap-2 shrink-0">
                       <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${priorityColor[o.priority] ?? ""}`}>{o.priority}</span>
                       <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[o.status] ?? ""}`}>{o.status}</span>
                     </div>

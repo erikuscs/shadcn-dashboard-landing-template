@@ -138,7 +138,7 @@ export function MessageInput({
             onKeyDown={handleKeyPress}
             disabled={disabled}
             className={cn(
-              "min-h-[40px] max-h-[120px] resize-none cursor-text disabled:cursor-not-allowed",
+              "min-h-10 max-h-30 resize-none cursor-text disabled:cursor-not-allowed",
               "pr-20" // Space for emoji and more buttons
             )}
             rows={1}

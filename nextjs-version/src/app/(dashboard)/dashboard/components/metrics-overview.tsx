@@ -24,7 +24,7 @@ const iconMap = {
 
 export function MetricsOverview({ metrics }: { metrics: MetricCard[] }) {
   return (
-    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs grid gap-4 sm:grid-cols-2 @5xl:grid-cols-4">
+    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs grid gap-4 sm:grid-cols-2 @5xl:grid-cols-4">
       {metrics.map((metric) => {
         const TrendIcon = metric.trend === "up" ? TrendingUp : metric.trend === "down" ? TrendingDown : TrendingUp
         const Icon = iconMap[metric.icon]

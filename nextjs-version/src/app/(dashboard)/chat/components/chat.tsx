@@ -97,7 +97,7 @@ export function Chat({
 
   return (
     <TooltipProvider delayDuration={0}>
-      <div className="h-full min-h-[600px] max-h-[calc(100vh-200px)] flex rounded-lg border overflow-hidden bg-background">
+      <div className="h-full min-h-150 max-h-[calc(100vh-200px)] flex rounded-lg border overflow-hidden bg-background">
         {/* Mobile Sidebar Overlay */}
         {isSidebarOpen && (
           <div

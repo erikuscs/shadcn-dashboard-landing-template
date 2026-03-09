@@ -153,7 +153,7 @@ export function DataTableToolbar<TData>({
             onChange={(event) =>
               table.getColumn("title")?.setFilterValue(event.target.value)
             }
-            className=" w-[200px] lg:w-[300px] cursor-text"
+            className=" w-50 lg:w-75 cursor-text"
           />
           <Button
             variant="outline"

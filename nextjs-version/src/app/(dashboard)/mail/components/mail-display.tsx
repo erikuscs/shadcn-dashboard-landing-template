@@ -62,7 +62,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
             <PopoverContent className="flex w-auto p-0">
               <div className="flex flex-col gap-2 border-r px-2 py-4">
                 <div className="px-4 text-sm font-medium">Snooze until</div>
-                <div className="grid min-w-[250px] gap-1">
+                <div className="grid min-w-62.5 gap-1">
                   <Button variant="ghost" className="justify-start font-normal cursor-pointer">
                     Later today{" "}
                     <span className="text-muted-foreground ml-auto">

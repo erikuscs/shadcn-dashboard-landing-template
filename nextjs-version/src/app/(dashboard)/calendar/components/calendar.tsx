@@ -18,7 +18,7 @@ export function Calendar({ events, eventDates }: CalendarProps) {
   return (
     <>
       <div className="border rounded-lg bg-background relative">
-        <div className="flex min-h-[800px]">
+        <div className="flex min-h-200">
           {/* Desktop Sidebar - Hidden on mobile/tablet, shown on extra large screens */}
           <div className="hidden xl:block w-80 flex-shrink-0 border-r">
             <CalendarSidebar

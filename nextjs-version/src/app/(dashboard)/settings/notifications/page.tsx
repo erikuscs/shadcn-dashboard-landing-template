@@ -338,7 +338,7 @@ export default function NotificationSettings() {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead className="w-[200px]">TYPE</TableHead>
+                        <TableHead className="w-50">TYPE</TableHead>
                         <TableHead className="text-center">EMAIL</TableHead>
                         <TableHead className="text-center">BROWSER</TableHead>
                         <TableHead className="text-center">APP</TableHead>

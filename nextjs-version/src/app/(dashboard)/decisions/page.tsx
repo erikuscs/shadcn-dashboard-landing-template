@@ -134,19 +134,19 @@ export default function DecisionsPage() {
       </div>
 
       <div className="flex gap-3 flex-wrap">
-        <div className="relative flex-1 min-w-[200px]">
+        <div className="relative flex-1 min-w-50">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input className="pl-8" placeholder="Search decisions..." value={search} onChange={e => setSearch(e.target.value)} />
         </div>
         <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-          <SelectTrigger className="w-[150px]"><SelectValue placeholder="Category" /></SelectTrigger>
+          <SelectTrigger className="w-37.5"><SelectValue placeholder="Category" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
             {categories.map(c => <SelectItem key={c} value={c} className="capitalize">{c}</SelectItem>)}
           </SelectContent>
         </Select>
         <Select value={outcomeFilter} onValueChange={setOutcomeFilter}>
-          <SelectTrigger className="w-[140px]"><SelectValue placeholder="Outcome" /></SelectTrigger>
+          <SelectTrigger className="w-35"><SelectValue placeholder="Outcome" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Outcomes</SelectItem>
             <SelectItem value="pending">Pending</SelectItem>

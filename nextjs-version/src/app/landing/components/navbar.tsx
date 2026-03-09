@@ -153,7 +153,7 @@ export function LandingNavbar() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-full sm:w-[400px] p-0 gap-0 [&>button]:hidden overflow-hidden flex flex-col">
+          <SheetContent side="right" className="w-full sm:w-100 p-0 gap-0 [&>button]:hidden overflow-hidden flex flex-col">
             <div className="flex flex-col h-full">
               {/* Header */}
               <SheetHeader className="space-y-0 p-4 pb-2 border-b">

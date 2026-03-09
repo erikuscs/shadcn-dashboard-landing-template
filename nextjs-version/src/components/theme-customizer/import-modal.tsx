@@ -75,7 +75,7 @@ export function ImportModal({ open, onOpenChange, onImport }: ImportModalProps) 
           <div className="space-y-2">
             <Textarea
               id="theme-css"
-              className="flex w-full rounded-md border border-input bg-transparent px-3 py-2 shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm max-h-[400px] min-h-[300px] font-mono text-sm text-foreground overflow-y-auto resize-none"
+              className="flex w-full rounded-md border border-input bg-transparent px-3 py-2 shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm max-h-100 min-h-75 font-mono text-sm text-foreground overflow-y-auto resize-none"
               placeholder={`:root {
   --background: 0 0% 100%;
   --foreground: oklch(0.52 0.13 144.17);

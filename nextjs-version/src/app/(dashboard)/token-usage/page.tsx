@@ -322,12 +322,12 @@ export default function TokenUsagePage() {
         {/* Token Spend Tab */}
         <TabsContent value="spend" className="mt-4 space-y-4">
           <div className="flex gap-3 flex-wrap">
-            <div className="relative flex-1 min-w-[200px]">
+            <div className="relative flex-1 min-w-50">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input className="pl-8" placeholder="Search staff..." value={search} onChange={e => setSearch(e.target.value)} />
             </div>
             <Select value={deptFilter} onValueChange={setDeptFilter}>
-              <SelectTrigger className="w-[160px]"><SelectValue placeholder="Department" /></SelectTrigger>
+              <SelectTrigger className="w-40"><SelectValue placeholder="Department" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Departments</SelectItem>
                 {departments.map(d => <SelectItem key={d} value={d}>{d}</SelectItem>)}

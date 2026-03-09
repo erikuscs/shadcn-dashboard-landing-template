@@ -109,7 +109,7 @@ export default function TeamPageClient() {
           <CardDescription>Workload percentage per team member — red line at 80% capacity</CardDescription>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-[280px] w-full">
+          <ChartContainer config={chartConfig} className="h-70 w-full">
             <BarChart data={[...members].sort((a, b) => b.workload - a.workload)} margin={{ top: 10, right: 10, left: 0, bottom: 60 }} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" className="stroke-muted/30" horizontal={false} />
               <XAxis type="number" domain={[0, 100]} tickLine={false} axisLine={false} tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}%`} />

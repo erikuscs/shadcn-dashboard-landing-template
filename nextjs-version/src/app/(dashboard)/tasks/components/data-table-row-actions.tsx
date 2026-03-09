@@ -35,7 +35,7 @@ export function DataTableRowActions<TData>({
           <span className="sr-only">Open menu</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[160px]">
+      <DropdownMenuContent align="end" className="w-40">
         <DropdownMenuItem className="cursor-pointer">View Task</DropdownMenuItem>
         <DropdownMenuItem className="cursor-pointer">Edit Task</DropdownMenuItem>
         <DropdownMenuSeparator />

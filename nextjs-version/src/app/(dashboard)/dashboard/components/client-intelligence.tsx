@@ -111,7 +111,7 @@ export function ClientIntelligence({
               <div className="grid grid-cols-10 gap-6">
                 <div className="col-span-10 xl:col-span-7">
                   <h3 className="text-sm font-medium text-muted-foreground mb-6">Signals by Sector</h3>
-                  <ChartContainer config={chartConfig} className="h-[375px] w-full">
+                  <ChartContainer config={chartConfig} className="h-93.75 w-full">
                     <BarChart data={sectorData} margin={{ top: 20, right: 20, bottom: 20, left: 0 }}>
                       <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
                       <XAxis dataKey="sector" className="text-xs" tick={{ fontSize: 12 }} tickLine={{ stroke: "var(--border)" }} axisLine={{ stroke: "var(--border)" }} />
@@ -171,7 +171,7 @@ export function ClientIntelligence({
                         <div className="flex items-center gap-6">
                           {/* Radial gauge */}
                           <div className="relative shrink-0">
-                            <ChartContainer config={{ value: { label: "Score", color: scoreColor } }} className="h-[120px] w-[120px]">
+                            <ChartContainer config={{ value: { label: "Score", color: scoreColor } }} className="h-30 w-30">
                               <RadialBarChart data={radialData} innerRadius={35} outerRadius={55} startAngle={90} endAngle={-270} barSize={14}>
                                 <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
                                 <RadialBar dataKey="value" background={{ fill: "var(--muted)" }} cornerRadius={8} />

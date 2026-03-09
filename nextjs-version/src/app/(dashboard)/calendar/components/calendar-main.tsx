@@ -121,7 +121,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
               <div
                 key={day.toISOString()}
                 className={cn(
-                  "min-h-[120px] border-r border-b last:border-r-0 p-2 cursor-pointer transition-colors",
+                  "min-h-30 border-r border-b last:border-r-0 p-2 cursor-pointer transition-colors",
                   isCurrentMonth ? "bg-background hover:bg-accent/50" : "bg-muted/30 text-muted-foreground",
                   isSelected && "ring-2 ring-primary ring-inset",
                   isDayToday && "bg-accent/20"

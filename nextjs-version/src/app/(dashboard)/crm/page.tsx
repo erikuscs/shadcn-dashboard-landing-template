@@ -329,7 +329,7 @@ function CompanyRow({ company, contacts, onUpdate, onRefresh }: {
           <p className="text-xs text-muted-foreground">{company.hq}</p>
         </TableCell>
         <TableCell className="text-sm">{company.sector}</TableCell>
-        <TableCell className="text-xs text-muted-foreground max-w-[160px] truncate">{company.marketSegment}</TableCell>
+        <TableCell className="text-xs text-muted-foreground max-w-40 truncate">{company.marketSegment}</TableCell>
         <TableCell>
           <div className="flex items-center gap-1">
             <div className={`h-2 rounded-full ${company.fitScore >= 80 ? "bg-green-500" : company.fitScore >= 60 ? "bg-yellow-500" : "bg-slate-400"}`} style={{ width: `${Math.max(8, company.fitScore)}px` }} />
@@ -536,12 +536,12 @@ export default function CrmPage() {
         <TabsContent value="companies" className="mt-4 space-y-4">
           {/* Filters */}
           <div className="flex gap-3 flex-wrap">
-            <div className="relative flex-1 min-w-[200px]">
+            <div className="relative flex-1 min-w-50">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input className="pl-8" placeholder="Search companies..." value={search} onChange={e => setSearch(e.target.value)} />
             </div>
             <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger className="w-[150px]"><SelectValue placeholder="Status" /></SelectTrigger>
+              <SelectTrigger className="w-37.5"><SelectValue placeholder="Status" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Status</SelectItem>
                 <SelectItem value="identified">Identified</SelectItem>
@@ -553,7 +553,7 @@ export default function CrmPage() {
               </SelectContent>
             </Select>
             <Select value={sectorFilter} onValueChange={setSectorFilter}>
-              <SelectTrigger className="w-[150px]"><SelectValue placeholder="Sector" /></SelectTrigger>
+              <SelectTrigger className="w-37.5"><SelectValue placeholder="Sector" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Sectors</SelectItem>
                 {sectors.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}

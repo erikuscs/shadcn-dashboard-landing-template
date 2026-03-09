@@ -62,7 +62,7 @@ export function RevenueBreakdown() {
         <div className="flex items-center space-x-2">
           <Select value={activeCategory} onValueChange={setActiveCategory}>
             <SelectTrigger
-              className="w-[175px] rounded-lg cursor-pointer"
+              className="w-43.75 rounded-lg cursor-pointer"
               aria-label="Select a category"
             >
               <SelectValue placeholder="Select category" />
@@ -106,7 +106,7 @@ export function RevenueBreakdown() {
             <ChartContainer
               id={id}
               config={chartConfig}
-              className="mx-auto aspect-square w-full max-w-[300px]"
+              className="mx-auto aspect-square w-full max-w-75"
             >
               <PieChart>
                 <ChartTooltip

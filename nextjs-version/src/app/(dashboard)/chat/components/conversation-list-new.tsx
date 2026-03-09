@@ -144,7 +144,7 @@ export function ConversationList({
               <div className="flex-1 min-w-0 overflow-hidden">
                 <div className="flex items-center justify-between mb-1 min-w-0">
                   <div className="flex items-center gap-1 min-w-0 flex-1 overflow-hidden">
-                    <h3 className="font-medium truncate min-w-0 max-w-[180px]">{conversation.name}</h3>
+                    <h3 className="font-medium truncate min-w-0 max-w-45">{conversation.name}</h3>
                     {conversation.isPinned && (
                       <Pin className="h-3 w-3 text-muted-foreground flex-shrink-0" />
                     )}
@@ -158,13 +158,13 @@ export function ConversationList({
                 </div>
 
                 <div className="flex items-center justify-between gap-2 min-w-0">
-                  <p className="text-sm text-muted-foreground truncate flex-1 min-w-0 max-w-[200px]">
+                  <p className="text-sm text-muted-foreground truncate flex-1 min-w-0 max-w-50">
                     {conversation.lastMessage.content}
                   </p>
 
                   {/* Unread count */}
                   {conversation.unreadCount > 0 && (
-                    <Badge variant="default" className="ml-2 min-w-[20px] h-5 text-xs cursor-pointer flex-shrink-0">
+                    <Badge variant="default" className="ml-2 min-w-5 h-5 text-xs cursor-pointer flex-shrink-0">
                       {conversation.unreadCount > 99 ? "99+" : conversation.unreadCount}
                     </Badge>
                   )}

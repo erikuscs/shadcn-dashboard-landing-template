@@ -91,7 +91,7 @@ export function CustomerInsights() {
                 {/* Chart Area - 70% */}
                 <div className="col-span-10 xl:col-span-7">
                   <h3 className="text-sm font-medium text-muted-foreground mb-6">Customer Growth Trends</h3>
-                  <ChartContainer config={chartConfig} className="h-[375px] w-full">
+                  <ChartContainer config={chartConfig} className="h-93.75 w-full">
                     <BarChart data={customerGrowthData} margin={{ top: 20, right: 20, bottom: 20, left: 0 }}>
                       <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
                       <XAxis
