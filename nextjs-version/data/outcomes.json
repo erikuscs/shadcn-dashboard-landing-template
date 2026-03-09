@@ -1,0 +1,46 @@
+{
+  "updatedAt": "2026-03-09T13:00:00Z",
+  "outcomes": [
+    {
+      "id": "outcome-001",
+      "clientId": "client-001",
+      "clientName": "Meridian Energy GC",
+      "engagementId": "eng-001",
+      "closedAt": null,
+      "status": "in_progress",
+      "deliverables": [
+        { "id": "del-001", "title": "OT Network Gap Assessment", "status": "in_progress", "owner": "anika.rahman", "dueAt": "2026-03-19T00:00:00Z" },
+        { "id": "del-002", "title": "Physical Perimeter Remediation Plan", "status": "not_started", "owner": "elias.romero", "dueAt": "2026-04-15T00:00:00Z" },
+        { "id": "del-003", "title": "CIP-014 Compliance Roadmap", "status": "in_progress", "owner": "marcus.vale", "dueAt": "2026-03-31T00:00:00Z" }
+      ],
+      "baselineScores": { "overallFit": 54, "cyberOT": 28, "physicalSecurity": 65 },
+      "targetScores":   { "overallFit": 80, "cyberOT": 75, "physicalSecurity": 90 },
+      "finalScores":    null,
+      "measuredImpact": null,
+      "clientSatisfaction": null,
+      "referralGenerated": false,
+      "lessonsLearned": []
+    },
+    {
+      "id": "outcome-002",
+      "clientId": "client-003",
+      "clientName": "Consolidated Steel Partners",
+      "engagementId": null,
+      "closedAt": null,
+      "status": "at_risk",
+      "deliverables": [
+        { "id": "del-004", "title": "Structural Gap Mapping Report", "status": "delayed", "owner": "elias.romero", "dueAt": "2026-03-15T00:00:00Z" }
+      ],
+      "baselineScores": { "overallFit": 0, "cyberOT": 0, "physicalSecurity": 0 },
+      "targetScores":   { "overallFit": 65, "cyberOT": 0, "physicalSecurity": 70 },
+      "finalScores":    null,
+      "measuredImpact": null,
+      "clientSatisfaction": null,
+      "referralGenerated": false,
+      "lessonsLearned": [
+        "Stakeholder alignment not confirmed at kickoff — caused 2-week delay",
+        "Need a formal kickoff checklist with sign-off before work begins"
+      ]
+    }
+  ]
+}

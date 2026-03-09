@@ -29,7 +29,7 @@ import {
 const data = {
   user: {
     name: "Erik Herring",
-    email: "erik@sustainablegaps.com",
+    email: "erik.herring@sustainablegaps.com",
     avatar: "",
   },
   navGroups: [

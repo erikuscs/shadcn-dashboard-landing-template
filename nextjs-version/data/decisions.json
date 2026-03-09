@@ -1,0 +1,61 @@
+{
+  "updatedAt": "2026-03-09T13:00:00Z",
+  "decisions": [
+    {
+      "id": "dec-001",
+      "timestamp": "2026-03-07T09:00:00Z",
+      "decidedBy": "erik.herring",
+      "category": "client",
+      "title": "Prioritize Meridian OT segmentation — escalate to vendor",
+      "context": "Risk-001 (no OT segmentation) flagged critical. Fortinet preferred vendor identified.",
+      "decision": "Approved immediate vendor engagement for micro-segmentation assessment. Target close: March 19.",
+      "outcome": "pending",
+      "outcomeNotes": "",
+      "linkedRiskId": "risk-001",
+      "linkedClientId": "client-001",
+      "linkedSignalId": null
+    },
+    {
+      "id": "dec-002",
+      "timestamp": "2026-03-06T14:00:00Z",
+      "decidedBy": "erik.herring",
+      "category": "team",
+      "title": "Assign Meridian engagement to Sofia Mendes",
+      "context": "Pipeline deal pipe-001 needed a named owner with bandwidth.",
+      "decision": "Sofia assigned as primary engagement owner for Meridian Energy. Workload accepted.",
+      "outcome": "actioned",
+      "outcomeNotes": "Sofia onboarded Meridian. First delivery milestone hit March 6.",
+      "linkedRiskId": null,
+      "linkedClientId": "client-001",
+      "linkedSignalId": null
+    },
+    {
+      "id": "dec-003",
+      "timestamp": "2026-03-05T10:00:00Z",
+      "decidedBy": "erik.herring",
+      "category": "market",
+      "title": "Expand NERC CIP-014 monitoring — energy sector focus",
+      "context": "Signal sig-001 (CIP-014 amendment) indicated expanding compliance surface in sub-200MW facilities.",
+      "decision": "Directed Helena to increase regulatory scan frequency on energy sector. Added to signal classification priority.",
+      "outcome": "actioned",
+      "outcomeNotes": "Helena updated scanner parameters. 2 additional relevant signals surfaced within 48 hours.",
+      "linkedRiskId": null,
+      "linkedClientId": null,
+      "linkedSignalId": "sig-001"
+    },
+    {
+      "id": "dec-004",
+      "timestamp": "2026-03-09T13:00:00Z",
+      "decidedBy": "erik.herring",
+      "category": "operations",
+      "title": "Remove all staff skill limitations — learning policy open",
+      "context": "Organizational growth requires agents capable of expanding beyond primary role. Restricting cross-training limits compound intelligence.",
+      "decision": "All staff access levels upgraded. Learning policy set to unrestricted. Cross-department collaboration authorized without approval gates.",
+      "outcome": "actioned",
+      "outcomeNotes": "HR profiles updated. Ava notified staff via email and Teams.",
+      "linkedRiskId": null,
+      "linkedClientId": null,
+      "linkedSignalId": null
+    }
+  ]
+}

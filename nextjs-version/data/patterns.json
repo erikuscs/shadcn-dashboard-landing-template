@@ -1,0 +1,61 @@
+{
+  "updatedAt": "2026-03-09T13:00:00Z",
+  "patterns": [
+    {
+      "id": "pat-001",
+      "name": "Energy Sector Regulatory Lag",
+      "status": "confirmed",
+      "firstObservedAt": "2026-03-05T00:00:00Z",
+      "lastUpdatedAt": "2026-03-09T00:00:00Z",
+      "strength": "high",
+      "description": "Energy sector clients consistently operating 18–24 months behind regulatory compliance curves. NERC CIP amendments are known ahead of enforcement but not acted upon until audit pressure.",
+      "evidenceSources": ["sig-001", "risk-001", "client-001", "client-004"],
+      "implication": "Early engagement 12+ months before enforcement deadline creates strong ROI case for clients. Position Sustainable Gaps as the proactive partner, not reactive responder.",
+      "recommendedAction": "Build a regulatory calendar product — alert clients to upcoming deadlines with 12-month lead time.",
+      "owner": "marcus.vale",
+      "linkedOpportunityId": "opp-001"
+    },
+    {
+      "id": "pat-002",
+      "name": "IT/OT Convergence Blind Spot",
+      "status": "confirmed",
+      "firstObservedAt": "2026-03-06T00:00:00Z",
+      "lastUpdatedAt": "2026-03-09T00:00:00Z",
+      "strength": "critical",
+      "description": "Across energy and manufacturing clients, IT and OT teams operate in silos. Physical access controls and cyber controls are managed separately with no unified risk model.",
+      "evidenceSources": ["risk-001", "sig-003", "site-001"],
+      "implication": "Neither the IT team nor the OT team sees the full exposure picture. Sustainable Gaps occupies a unique position as the integrator of both views.",
+      "recommendedAction": "Develop a combined IT/OT/Physical Security Assessment as a standard service offering. Price as premium engagement.",
+      "owner": "anika.rahman",
+      "linkedOpportunityId": null
+    },
+    {
+      "id": "pat-003",
+      "name": "Small-Team Operational Overload",
+      "status": "emerging",
+      "firstObservedAt": "2026-03-07T00:00:00Z",
+      "lastUpdatedAt": "2026-03-09T00:00:00Z",
+      "strength": "medium",
+      "description": "Multiple team members (Ava 88%, Daniel 82%) showing workload above sustainable threshold. As client count grows without capacity expansion, delivery quality risk increases.",
+      "evidenceSources": ["team.json workload data"],
+      "implication": "Need either: (a) agent capacity expansion before next engagement intake, or (b) structured prioritization protocol to triage lower-priority work.",
+      "recommendedAction": "Leo to model next capacity ceiling. Ava to implement intake throttle if ceiling < 2 new engagements.",
+      "owner": "leo.navarro",
+      "linkedOpportunityId": null
+    },
+    {
+      "id": "pat-004",
+      "name": "Datacenter Build Wave — Physical Security Gap",
+      "status": "horizon",
+      "firstObservedAt": "2026-03-09T00:00:00Z",
+      "lastUpdatedAt": "2026-03-09T00:00:00Z",
+      "strength": "strategic",
+      "description": "AI workload growth is driving unprecedented datacenter construction globally. Physical security assessments are being skipped or deferred to post-build phase — creating exploitable gaps in facilities housing critical AI infrastructure.",
+      "evidenceSources": ["opp-003", "site-003"],
+      "implication": "This is a 5-10 year macro trend. The firm that establishes methodology and reputation for datacenter physical security assessment now will dominate as the sector matures.",
+      "recommendedAction": "Begin building datacenter-specific assessment methodology. Target first datacenter client by Q3 2026.",
+      "owner": "marcus.vale",
+      "linkedOpportunityId": "opp-003"
+    }
+  ]
+}

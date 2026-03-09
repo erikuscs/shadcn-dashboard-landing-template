@@ -1,0 +1,73 @@
+{
+  "updatedAt": "2026-03-09T13:00:00Z",
+  "opportunities": [
+    {
+      "id": "opp-001",
+      "name": "CIP-014 Compliance Wave — Sub-200MW Facilities",
+      "sector": "Energy",
+      "type": "regulatory",
+      "source": "NERC regulatory feed + signal sig-001",
+      "description": "Proposed CIP-014 amendment creates compliance urgency for ~340 facilities under 200MW nationally. Most lack a qualified assessment partner.",
+      "estimatedAddressableUsd": 8500000,
+      "estimatedEngagementsInRange": 12,
+      "status": "researching",
+      "priority": "critical",
+      "owner": "marcus.vale",
+      "identifiedAt": "2026-03-05T00:00:00Z",
+      "targetActionDate": "2026-04-01T00:00:00Z",
+      "linkedClientIds": ["client-001", "client-004"],
+      "notes": "Apex Power Cooperative is highest-fit unengaged prospect in this wave. Harrow Industrial secondary consideration."
+    },
+    {
+      "id": "opp-002",
+      "name": "Regional Manufacturing Safety Consolidation",
+      "sector": "Manufacturing",
+      "type": "market",
+      "source": "Client pattern across eng-002, pipe-003, pipe-005",
+      "description": "Three mid-size manufacturers in overlapping geography face similar OSHA/physical security gaps. Package retainer offering could serve all three efficiently.",
+      "estimatedAddressableUsd": 320000,
+      "estimatedEngagementsInRange": 3,
+      "status": "qualified",
+      "priority": "high",
+      "owner": "sofia.mendes",
+      "identifiedAt": "2026-03-07T00:00:00Z",
+      "targetActionDate": "2026-03-20T00:00:00Z",
+      "linkedClientIds": ["client-002", "client-003", "client-005"],
+      "notes": "Shared-service model. Needs pricing structure from Marcus."
+    },
+    {
+      "id": "opp-003",
+      "name": "Datacenter Operator Physical Security Gap",
+      "sector": "Technology / Infrastructure",
+      "type": "emerging",
+      "source": "External market research — datacenter construction pipeline",
+      "description": "New datacenter builds (AI/hyperscaler wave) are outpacing physical security assessment capacity. Operators need qualified assessors at design stage, not post-build.",
+      "estimatedAddressableUsd": 25000000,
+      "estimatedEngagementsInRange": 40,
+      "status": "horizon",
+      "priority": "strategic",
+      "owner": "marcus.vale",
+      "identifiedAt": "2026-03-09T00:00:00Z",
+      "targetActionDate": "2026-06-01T00:00:00Z",
+      "linkedClientIds": [],
+      "notes": "This is the long-term growth vector. Agentic infrastructure builds need human-in-the-loop physical security assessment at the design phase. Position Sustainable Gaps as the specialist firm for this niche."
+    },
+    {
+      "id": "opp-004",
+      "name": "Post-Incident Recovery Assessment",
+      "sector": "Cross-Sector",
+      "type": "service_expansion",
+      "source": "Signal sig-004 — ransomware wave + industry incidents",
+      "description": "Organizations recovering from ransomware or physical breach events need a structured post-incident gap assessment. No current service offering covers this.",
+      "estimatedAddressableUsd": 1200000,
+      "estimatedEngagementsInRange": 8,
+      "status": "idea",
+      "priority": "medium",
+      "owner": "anika.rahman",
+      "identifiedAt": "2026-03-07T00:00:00Z",
+      "targetActionDate": "2026-05-01T00:00:00Z",
+      "linkedClientIds": [],
+      "notes": "Requires methodology development. Anika to draft scope framework."
+    }
+  ]
+}

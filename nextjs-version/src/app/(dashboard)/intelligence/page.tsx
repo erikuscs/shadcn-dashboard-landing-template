@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useMemo } from "react"
-import type { IntelligenceData, IntelligenceSignal, RiskEntry, PipelineEntry } from "@/lib/mission-store"
+import type { IntelligenceData, IntelligenceSignal, RiskEntry, PipelineEntry, Pattern, Opportunity } from "@/lib/mission-store"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -23,7 +23,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Progress } from "@/components/ui/progress"
-import { ChevronDown, ChevronRight, AlertTriangle, Search, MoreHorizontal, TrendingUp, Shield, DollarSign, ArrowUpDown } from "lucide-react"
+import { ChevronDown, ChevronRight, AlertTriangle, Search, MoreHorizontal, TrendingUp, Shield, DollarSign, ArrowUpDown, Lightbulb, Network } from "lucide-react"
 
 // ── Color helpers ──────────────────────────────────────────────────
 const signalTypeBadge: Record<string, string> = {
@@ -130,6 +130,8 @@ function SignalRow({ signal, onUpdate }: { signal: IntelligenceSignal; onUpdate:
 // ── Main page ──────────────────────────────────────────────────────
 export default function IntelligencePage() {
   const [data, setData] = useState<IntelligenceData | null>(null)
+  const [patterns, setPatterns] = useState<Pattern[]>([])
+  const [opportunities, setOpportunities] = useState<Opportunity[]>([])
   const [loading, setLoading] = useState(true)
 
   // Signal filters
@@ -151,7 +153,15 @@ export default function IntelligencePage() {
   const [pipeSector, setPipeSector] = useState("all")
 
   useEffect(() => {
-    fetch("/api/intelligence").then((r) => r.json()).then(setData).finally(() => setLoading(false))
+    Promise.all([
+      fetch("/api/intelligence").then((r) => r.json()),
+      fetch("/api/patterns").then((r) => r.json()),
+      fetch("/api/opportunities").then((r) => r.json()),
+    ]).then(([intel, pat, opp]) => {
+      setData(intel)
+      setPatterns(pat?.patterns ?? [])
+      setOpportunities(opp?.opportunities ?? [])
+    }).finally(() => setLoading(false))
   }, [])
 
   const handleSignalUpdate = (id: string, status: string) => {
@@ -246,6 +256,12 @@ export default function IntelligencePage() {
           </TabsTrigger>
           <TabsTrigger value="pipeline" className="cursor-pointer gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm">
             <TrendingUp className="h-4 w-4" /> Pipeline ({filteredPipeline.length})
+          </TabsTrigger>
+          <TabsTrigger value="patterns" className="cursor-pointer gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+            <Network className="h-4 w-4" /> Patterns ({patterns.length})
+          </TabsTrigger>
+          <TabsTrigger value="opportunities" className="cursor-pointer gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+            <Lightbulb className="h-4 w-4" /> Opportunities ({opportunities.length})
           </TabsTrigger>
         </TabsList>
 
@@ -474,6 +490,108 @@ export default function IntelligencePage() {
               <span className="font-bold">Total: ${filteredPipeline.reduce((s, p) => s + p.valueUsd, 0).toLocaleString()}</span>
             </CardContent>
           </Card>
+        </TabsContent>
+
+        {/* ── Patterns tab ── */}
+        <TabsContent value="patterns" className="space-y-3">
+          {patterns.map((p) => {
+            const strengthColor: Record<string, string> = {
+              strategic: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+              critical:  "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+              high:      "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
+              medium:    "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+              low:       "bg-gray-100 text-gray-700",
+            }
+            const statusColor: Record<string, string> = {
+              confirmed: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+              emerging:  "bg-amber-100 text-amber-800",
+              horizon:   "bg-blue-100 text-blue-800",
+              resolved:  "bg-gray-100 text-gray-600",
+            }
+            return (
+              <Card key={p.id} className="border-l-4" style={{ borderLeftColor: p.strength === "strategic" ? "#a855f7" : p.strength === "critical" ? "#ef4444" : p.strength === "high" ? "#f59e0b" : "#3b82f6" }}>
+                <CardHeader className="pb-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <CardTitle className="text-base">{p.name}</CardTitle>
+                    <div className="flex gap-2 flex-shrink-0">
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${strengthColor[p.strength] ?? ""}`}>{p.strength}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[p.status] ?? ""}`}>{p.status}</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">{p.description}</p>
+                  <div className="rounded-lg bg-muted/50 p-3 space-y-1">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Strategic Implication</p>
+                    <p className="text-sm">{p.implication}</p>
+                  </div>
+                  <div className="rounded-lg border p-3 space-y-1">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Recommended Action</p>
+                    <p className="text-sm">{p.recommendedAction}</p>
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <span>Owner: {p.owner}</span>
+                    <span>First observed: {new Date(p.firstObservedAt).toLocaleDateString()}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
+          {patterns.length === 0 && <div className="text-muted-foreground text-sm px-2">No patterns identified yet.</div>}
+        </TabsContent>
+
+        {/* ── Opportunities tab ── */}
+        <TabsContent value="opportunities" className="space-y-3">
+          {opportunities.map((o) => {
+            const priorityColor: Record<string, string> = {
+              strategic: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+              critical:  "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+              high:      "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
+              medium:    "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+            }
+            const statusColor: Record<string, string> = {
+              horizon:     "bg-blue-100 text-blue-800",
+              researching: "bg-amber-100 text-amber-800",
+              qualified:   "bg-green-100 text-green-800",
+              idea:        "bg-gray-100 text-gray-700",
+            }
+            return (
+              <Card key={o.id} className="border-l-4" style={{ borderLeftColor: o.priority === "strategic" ? "#a855f7" : o.priority === "critical" ? "#ef4444" : o.priority === "high" ? "#f59e0b" : "#3b82f6" }}>
+                <CardHeader className="pb-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <CardTitle className="text-base">{o.name}</CardTitle>
+                      <CardDescription className="text-xs mt-0.5">{o.sector} · {o.type.replace("_", " ")}</CardDescription>
+                    </div>
+                    <div className="flex gap-2 flex-shrink-0">
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${priorityColor[o.priority] ?? ""}`}>{o.priority}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[o.status] ?? ""}`}>{o.status}</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">{o.description}</p>
+                  <div className="flex flex-wrap gap-6 text-sm">
+                    <div>
+                      <p className="text-xs text-muted-foreground">Addressable Market</p>
+                      <p className="font-semibold">${(o.estimatedAddressableUsd / 1_000_000).toFixed(1)}M</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground">Est. Engagements</p>
+                      <p className="font-semibold">{o.estimatedEngagementsInRange}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground">Target Action</p>
+                      <p className="font-semibold">{new Date(o.targetActionDate).toLocaleDateString()}</p>
+                    </div>
+                  </div>
+                  {o.notes && <p className="text-xs text-muted-foreground border-t pt-2">{o.notes}</p>}
+                  <div className="text-xs text-muted-foreground">Owner: {o.owner}</div>
+                </CardContent>
+              </Card>
+            )
+          })}
+          {opportunities.length === 0 && <div className="text-muted-foreground text-sm px-2">No opportunities identified yet.</div>}
         </TabsContent>
       </Tabs>
     </div>
