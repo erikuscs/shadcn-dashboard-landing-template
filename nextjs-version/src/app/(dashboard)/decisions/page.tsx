@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import type { Decision } from "@/lib/mission-store"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -20,10 +20,11 @@ const categoryColors: Record<string, string> = {
   platform:  "bg-slate-100 text-slate-700",
 }
 
-const outcomeIcon: Record<string, JSX.Element> = {
-  success: <CheckCircle className="h-4 w-4 text-green-500" />,
-  pending: <Clock className="h-4 w-4 text-amber-500" />,
-  failed:  <XCircle className="h-4 w-4 text-red-500" />,
+const outcomeIcon: Record<string, React.ReactElement> = {
+  actioned: <CheckCircle className="h-4 w-4 text-green-500" />,
+  pending:  <Clock className="h-4 w-4 text-amber-500" />,
+  reversed: <XCircle className="h-4 w-4 text-yellow-500" />,
+  failed:   <XCircle className="h-4 w-4 text-red-500" />,
 }
 
 function DecisionRow({ decision }: { decision: Decision }) {
@@ -104,7 +105,7 @@ export default function DecisionsPage() {
   })
 
   const pending = decisions.filter(d => d.outcome === "pending").length
-  const successes = decisions.filter(d => d.outcome === "success").length
+  const successes = decisions.filter(d => d.outcome === "actioned").length
   const categories = [...new Set(decisions.map(d => d.category))].filter(Boolean)
 
   if (loading) return <div className="px-6 py-10 text-muted-foreground text-sm">Loading decisions...</div>
