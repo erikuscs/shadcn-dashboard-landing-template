@@ -6,9 +6,19 @@
     "role": "Chief Intelligence Officer",
     "department": "Command",
     "manager": "Erik Herring",
-    "workload": 88,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+    "workload": 82,
+    "model": "gpt-4o",
+    "modelRationale": "Orchestration, cross-domain reasoning, and executive synthesis requires highest capability tier",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
+    ]
   },
   {
     "id": "agent-002",
@@ -18,8 +28,16 @@
     "department": "Intelligence",
     "manager": "Ava Sterling",
     "workload": 76,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "Long-form compliance document analysis and precise risk register authoring favors Claude context window",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ]
   },
   {
     "id": "agent-003",
@@ -28,9 +46,17 @@
     "role": "Operations Strategist",
     "department": "Operations",
     "manager": "Ava Sterling",
-    "workload": 62,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+    "workload": 72,
+    "model": "gpt-4o",
+    "modelRationale": "Strategic planning and cross-functional operations require GPT-4o multi-step reasoning",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams"
+    ]
   },
   {
     "id": "agent-004",
@@ -40,8 +66,16 @@
     "department": "Finance",
     "manager": "Erik Herring",
     "workload": 71,
-    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+    "model": "gpt-4o",
+    "modelRationale": "Financial modeling and premium impact forecasting requires GPT-4o numerical reasoning",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Outlook"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Outlook"
+    ]
   },
   {
     "id": "agent-005",
@@ -50,9 +84,17 @@
     "role": "Regulatory Compliance Analyst",
     "department": "Intelligence",
     "manager": "Marcus Vale",
-    "workload": 83,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "workload": 76,
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "NERC CIP, CMMC, CISA document analysis leverages Claude 200K context window for dense regulatory text",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ]
   },
   {
     "id": "agent-006",
@@ -62,8 +104,18 @@
     "department": "Client Success",
     "manager": "Ava Sterling",
     "workload": 55,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams", "Outlook"]
+    "model": "gpt-4o-mini",
+    "modelRationale": "High-volume client communication is latency-sensitive; gpt-4o-mini delivers quality at speed",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
+    ]
   },
   {
     "id": "agent-007",
@@ -73,8 +125,14 @@
     "department": "Intelligence",
     "manager": "Marcus Vale",
     "workload": 67,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "Pattern recognition across SEC filings and industry feeds leverages Claude analytical depth",
+    "requiredTools": [
+      "OpenClaw Mission Control"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control"
+    ]
   },
   {
     "id": "agent-008",
@@ -83,9 +141,17 @@
     "role": "Infrastructure Specialist",
     "department": "Delivery",
     "manager": "Claire Donovan",
-    "workload": 91,
-    "requiredTools": ["OpenClaw Mission Control", "Risk Register"],
-    "grantedTools": ["OpenClaw Mission Control", "Risk Register"]
+    "workload": 78,
+    "model": "gpt-4o",
+    "modelRationale": "OT/IT infrastructure assessment and hardening plans require GPT-4o technical depth",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Risk Register"
+    ]
   },
   {
     "id": "agent-009",
@@ -95,8 +161,14 @@
     "department": "Intelligence",
     "manager": "Daniel Cho",
     "workload": 74,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "model": "gpt-4o",
+    "modelRationale": "KPI framework design and benchmark modeling requires systematic GPT-4o analytical reasoning",
+    "requiredTools": [
+      "OpenClaw Mission Control"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control"
+    ]
   },
   {
     "id": "agent-010",
@@ -105,9 +177,17 @@
     "role": "Proposal & Briefing Lead",
     "department": "Client Success",
     "manager": "Theo Banks",
-    "workload": 58,
-    "requiredTools": ["OpenClaw Mission Control", "Outlook"],
-    "grantedTools": ["OpenClaw Mission Control", "Outlook"]
+    "workload": 65,
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "Executive briefs, RFP responses, and stakeholder documents require Claude superior prose quality",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Outlook"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Outlook"
+    ]
   },
   {
     "id": "agent-011",
@@ -117,8 +197,14 @@
     "department": "Operations",
     "manager": "Claire Donovan",
     "workload": 69,
-    "requiredTools": ["OpenClaw Mission Control"],
-    "grantedTools": ["OpenClaw Mission Control"]
+    "model": "gpt-4o-mini",
+    "modelRationale": "Process mapping is structured and repeatable; gpt-4o-mini delivers efficient quality at scale",
+    "requiredTools": [
+      "OpenClaw Mission Control"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control"
+    ]
   },
   {
     "id": "agent-012",
@@ -128,7 +214,15 @@
     "department": "Platform",
     "manager": "Erik Herring",
     "workload": 80,
-    "requiredTools": ["OpenClaw Mission Control", "Microsoft Teams"],
-    "grantedTools": ["OpenClaw Mission Control", "Microsoft Teams"]
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "Platform engineering and toolchain integration benefits from Claude code comprehension and precision",
+    "requiredTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams"
+    ],
+    "grantedTools": [
+      "OpenClaw Mission Control",
+      "Microsoft Teams"
+    ]
   }
 ]
