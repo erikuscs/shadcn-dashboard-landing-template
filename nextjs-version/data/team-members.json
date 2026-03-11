@@ -24,8 +24,8 @@
     "id": "agent-002",
     "email": "marcus.vale@sustainablegaps.com",
     "name": "Marcus Vale",
-    "role": "Senior Risk Analyst",
-    "department": "Intelligence",
+    "role": "Director of Strategy",
+    "department": "Strategy",
     "manager": "Ava Sterling",
     "workload": 76,
     "model": "claude-sonnet-4-5",
@@ -43,8 +43,8 @@
     "id": "agent-003",
     "email": "claire.donovan@sustainablegaps.com",
     "name": "Claire Donovan",
-    "role": "Operations Strategist",
-    "department": "Operations",
+    "role": "Decision Integrity Officer",
+    "department": "Governance",
     "manager": "Ava Sterling",
     "workload": 72,
     "model": "gpt-4o",
@@ -62,7 +62,7 @@
     "id": "agent-004",
     "email": "daniel.cho@sustainablegaps.com",
     "name": "Daniel Cho",
-    "role": "Financial Intelligence Lead",
+    "role": "Financial Impact Analyst",
     "department": "Finance",
     "manager": "Erik Herring",
     "workload": 71,
@@ -79,14 +79,14 @@
   },
   {
     "id": "agent-005",
-    "email": "riya.nair@sustainablegaps.com",
-    "name": "Riya Nair",
-    "role": "Regulatory Compliance Analyst",
+    "email": "helena.cross@sustainablegaps.com",
+    "name": "Helena Cross",
+    "role": "Chief Intelligence Officer",
     "department": "Intelligence",
-    "manager": "Marcus Vale",
-    "workload": 76,
+    "manager": "Erik Herring",
+    "workload": 88,
     "model": "claude-sonnet-4-5",
-    "modelRationale": "NERC CIP, CMMC, CISA document analysis leverages Claude 200K context window for dense regulatory text",
+    "modelRationale": "NERC CIP, CMMC, CISA regulatory analysis and threat signal classification require Claude's deep context window for dense regulatory text",
     "requiredTools": [
       "OpenClaw Mission Control",
       "Risk Register"
@@ -98,131 +98,139 @@
   },
   {
     "id": "agent-006",
-    "email": "theo.banks@sustainablegaps.com",
-    "name": "Theo Banks",
-    "role": "Client Engagement Director",
-    "department": "Client Success",
-    "manager": "Ava Sterling",
-    "workload": 55,
-    "model": "gpt-4o-mini",
-    "modelRationale": "High-volume client communication is latency-sensitive; gpt-4o-mini delivers quality at speed",
+    "email": "anika.rahman@sustainablegaps.com",
+    "name": "Anika Rahman",
+    "role": "Risk & Vulnerability Analyst",
+    "department": "Risk",
+    "manager": "Helena Cross",
+    "workload": 79,
+    "model": "claude-sonnet-4-5",
+    "modelRationale": "Risk register authoring and compliance framework cross-referencing leverages Claude's analytical depth and long context",
     "requiredTools": [
       "OpenClaw Mission Control",
-      "Microsoft Teams",
-      "Outlook"
+      "Risk Register"
     ],
     "grantedTools": [
       "OpenClaw Mission Control",
-      "Microsoft Teams",
-      "Outlook"
+      "Risk Register"
     ]
   },
   {
     "id": "agent-007",
-    "email": "priya.osei@sustainablegaps.com",
-    "name": "Priya Osei",
-    "role": "Market Signal Analyst",
-    "department": "Intelligence",
-    "manager": "Marcus Vale",
-    "workload": 67,
-    "model": "claude-sonnet-4-5",
-    "modelRationale": "Pattern recognition across SEC filings and industry feeds leverages Claude analytical depth",
+    "email": "sofia.mendes@sustainablegaps.com",
+    "name": "Sofia Mendes",
+    "role": "Partnership Development Director",
+    "department": "Partnerships",
+    "manager": "Erik Herring",
+    "workload": 68,
+    "model": "gpt-4o",
+    "modelRationale": "Vendor evaluation and partner due diligence require GPT-4o multi-step reasoning across complex relationship data",
     "requiredTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
     ],
     "grantedTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
     ]
   },
   {
     "id": "agent-008",
-    "email": "leon.marsh@sustainablegaps.com",
-    "name": "Leon Marsh",
-    "role": "Infrastructure Specialist",
-    "department": "Delivery",
-    "manager": "Claire Donovan",
-    "workload": 78,
+    "email": "leo.navarro@sustainablegaps.com",
+    "name": "Leo Navarro",
+    "role": "Internal PM & Capacity Monitor",
+    "department": "Operations",
+    "manager": "Ava Sterling",
+    "workload": 75,
     "model": "gpt-4o",
-    "modelRationale": "OT/IT infrastructure assessment and hardening plans require GPT-4o technical depth",
+    "modelRationale": "Capacity planning and delivery coordination require GPT-4o structured reasoning across multiple active engagements",
     "requiredTools": [
       "OpenClaw Mission Control",
-      "Risk Register"
+      "Microsoft Teams"
     ],
     "grantedTools": [
       "OpenClaw Mission Control",
-      "Risk Register"
+      "Microsoft Teams"
     ]
   },
   {
     "id": "agent-009",
-    "email": "nina.cross@sustainablegaps.com",
-    "name": "Nina Cross",
-    "role": "KPI Architect",
-    "department": "Intelligence",
-    "manager": "Daniel Cho",
-    "workload": 74,
+    "email": "elias.romero@sustainablegaps.com",
+    "name": "Elias Romero",
+    "role": "Fit & Gap Scoring Architect",
+    "department": "Analytics",
+    "manager": "Marcus Vale",
+    "workload": 73,
     "model": "gpt-4o",
-    "modelRationale": "KPI framework design and benchmark modeling requires systematic GPT-4o analytical reasoning",
+    "modelRationale": "Fit scoring model design and gap analysis framework authoring requires GPT-4o systematic analytical reasoning",
     "requiredTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Risk Register"
     ],
     "grantedTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Risk Register"
     ]
   },
   {
     "id": "agent-010",
-    "email": "sam.ford@sustainablegaps.com",
-    "name": "Sam Ford",
-    "role": "Proposal & Briefing Lead",
-    "department": "Client Success",
-    "manager": "Theo Banks",
-    "workload": 65,
+    "email": "arjun.patel@sustainablegaps.com",
+    "name": "Arjun Patel",
+    "role": "DevOps & Data Integrity Engineer",
+    "department": "Infrastructure",
+    "manager": "Leo Navarro",
+    "workload": 82,
     "model": "claude-sonnet-4-5",
-    "modelRationale": "Executive briefs, RFP responses, and stakeholder documents require Claude superior prose quality",
+    "modelRationale": "Platform engineering and toolchain integration benefits from Claude code comprehension, precision, and long-context debugging",
     "requiredTools": [
       "OpenClaw Mission Control",
-      "Outlook"
+      "Microsoft Teams"
     ],
     "grantedTools": [
       "OpenClaw Mission Control",
-      "Outlook"
+      "Microsoft Teams"
     ]
   },
   {
     "id": "agent-011",
-    "email": "zara.quinn@sustainablegaps.com",
-    "name": "Zara Quinn",
-    "role": "Process Optimization Analyst",
-    "department": "Operations",
-    "manager": "Claire Donovan",
-    "workload": 69,
+    "email": "morgan.reyes@sustainablegaps.com",
+    "name": "Morgan Reyes",
+    "role": "Executive Operations Coordinator",
+    "department": "Command",
+    "manager": "Ava Sterling",
+    "workload": 71,
     "model": "gpt-4o-mini",
-    "modelRationale": "Process mapping is structured and repeatable; gpt-4o-mini delivers efficient quality at scale",
+    "modelRationale": "High-volume coordination, scheduling, and operational routing is structured and repeatable; gpt-4o-mini delivers at speed",
     "requiredTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
     ],
     "grantedTools": [
-      "OpenClaw Mission Control"
+      "OpenClaw Mission Control",
+      "Microsoft Teams",
+      "Outlook"
     ]
   },
   {
     "id": "agent-012",
-    "email": "eli.torres@sustainablegaps.com",
-    "name": "Eli Torres",
-    "role": "Platform & Tools Engineer",
-    "department": "Platform",
-    "manager": "Erik Herring",
-    "workload": 80,
+    "email": "casey.odum@sustainablegaps.com",
+    "name": "Casey Odum",
+    "role": "Junior Compliance Analyst",
+    "department": "Intelligence",
+    "manager": "Anika Rahman",
+    "workload": 64,
     "model": "claude-sonnet-4-5",
-    "modelRationale": "Platform engineering and toolchain integration benefits from Claude code comprehension and precision",
+    "modelRationale": "NERC CIP and CMMC compliance document review leverages Claude's 200K context window for dense regulatory text parsing",
     "requiredTools": [
       "OpenClaw Mission Control",
-      "Microsoft Teams"
+      "Risk Register"
     ],
     "grantedTools": [
       "OpenClaw Mission Control",
-      "Microsoft Teams"
+      "Risk Register"
     ]
   }
 ]
