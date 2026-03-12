@@ -605,3 +605,38 @@ export async function readTokenUsage() {
 export async function writeTokenUsage(data: TokenUsageData) {
   await fs.writeFile(tokenUsagePath, `${JSON.stringify(data, null, 2)}\n`, "utf8")
 }
+
+// ── Ava Chat ───────────────────────────────────────────────────────
+export type AvaChatMessage = {
+  id: string
+  timestamp: string
+  from: "user" | "ava"
+  text: string
+  status?: "pending" | "complete" | "error"
+}
+
+const avaChatPath = path.join(dataDir, "ava-chat.json")
+
+export async function readAvaChat() {
+  await ensureFile(avaChatPath, "[]\n")
+  const raw = await fs.readFile(avaChatPath, "utf8")
+  return JSON.parse(raw) as AvaChatMessage[]
+}
+
+export async function writeAvaChat(messages: AvaChatMessage[]) {
+  await fs.writeFile(avaChatPath, `${JSON.stringify(messages, null, 2)}\n`, "utf8")
+}
+
+export function createAvaChatMessage(
+  from: AvaChatMessage["from"],
+  text: string,
+  status?: AvaChatMessage["status"],
+): AvaChatMessage {
+  return {
+    id: `msg-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    timestamp: new Date().toISOString(),
+    from,
+    text,
+    status,
+  }
+}
