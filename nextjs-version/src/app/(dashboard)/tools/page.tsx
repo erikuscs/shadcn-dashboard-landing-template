@@ -10,6 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { ToolRunButton } from "./run-button"
 
 const stateVariant: Record<ToolState, "default" | "secondary" | "outline"> = {
   Live: "default",
@@ -40,6 +41,7 @@ export default async function ToolsPage() {
                 <TableHead>Owner</TableHead>
                 <TableHead>Trigger</TableHead>
                 <TableHead>Last Run</TableHead>
+                <TableHead className="w-24" />
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -64,6 +66,13 @@ export default async function ToolsPage() {
                     {t.lastRunAt
                       ? new Date(t.lastRunAt).toLocaleDateString()
                       : "Never"}
+                  </TableCell>
+                  <TableCell>
+                    <ToolRunButton
+                      toolId={t.id}
+                      toolName={t.name}
+                      disabled={t.state === "Draft"}
+                    />
                   </TableCell>
                 </TableRow>
               ))}

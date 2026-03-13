@@ -1,18 +1,18 @@
 import { NextResponse } from "next/server";
 import {
-  createAvaChatMessage,
+  createChloeChatMessage,
   createLog,
-  readAvaChat,
+  readChloeChat,
   readLogs,
-  writeAvaChat,
+  writeChloeChat,
   writeLogs,
-  type AvaChatMessage,
+  type ChloeChatMessage,
 } from "@/lib/mission-store";
 
 export const runtime = "nodejs";
 
 export async function GET() {
-  const messages = await readAvaChat();
+  const messages = await readChloeChat();
   return NextResponse.json({ messages: messages.slice(0, 100) });
 }
 
@@ -22,37 +22,37 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Command text required." }, { status: 400 });
   }
 
-  const messages = await readAvaChat();
+  const messages = await readChloeChat();
 
-  const userMsg = createAvaChatMessage("user", payload.text.trim());
-  const avaAck = createAvaChatMessage(
-    "ava",
-    "Command received. I am reviewing your directive now — I will update this thread once the action is complete.",
+  const userMsg = createChloeChatMessage("user", payload.text.trim());
+  const chloeAck = createChloeChatMessage(
+    "chloe",
+    "Command received. Reviewing your directive now — I will update this thread once the action is complete.",
     "pending",
   );
 
-  // Newest first in storage; chronologically userMsg is before avaAck
-  messages.unshift(avaAck, userMsg);
-  await writeAvaChat(messages.slice(0, 200));
+  // Newest first in storage; chronologically userMsg is before chloeAck
+  messages.unshift(chloeAck, userMsg);
+  await writeChloeChat(messages.slice(0, 200));
 
   const logs = await readLogs();
-  logs.unshift(createLog("info", `Ava command queued: "${userMsg.text.slice(0, 80)}"`));
+  logs.unshift(createLog("info", `Command queued: "${userMsg.text.slice(0, 80)}"`));
   await writeLogs(logs.slice(0, 200));
 
-  return NextResponse.json({ userMsg, avaAck }, { status: 201 });
+  return NextResponse.json({ userMsg, chloeAck }, { status: 201 });
 }
 
 export async function PATCH(request: Request) {
   const payload = (await request.json()) as {
     id?: string;
     text?: string;
-    status?: AvaChatMessage["status"];
+    status?: ChloeChatMessage["status"];
   };
   if (!payload.id) {
     return NextResponse.json({ error: "id required." }, { status: 400 });
   }
 
-  const messages = await readAvaChat();
+  const messages = await readChloeChat();
   const updated = messages.map((m) =>
     m.id === payload.id
       ? {
@@ -62,10 +62,10 @@ export async function PATCH(request: Request) {
         }
       : m,
   );
-  await writeAvaChat(updated);
+  await writeChloeChat(updated);
 
   const logs = await readLogs();
-  logs.unshift(createLog("info", `Ava response updated for message ${payload.id}.`));
+  logs.unshift(createLog("info", `Chloe response updated for message ${payload.id}.`));
   await writeLogs(logs.slice(0, 200));
 
   return NextResponse.json({ ok: true });

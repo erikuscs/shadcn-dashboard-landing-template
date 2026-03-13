@@ -42,6 +42,8 @@ export type TeamMember = {
   workload: number;
   requiredTools: string[];
   grantedTools: string[];
+  model?: string;
+  modelRationale?: string;
   status?: string;
   startDate?: string;
   hireReason?: string;
@@ -606,32 +608,32 @@ export async function writeTokenUsage(data: TokenUsageData) {
   await fs.writeFile(tokenUsagePath, `${JSON.stringify(data, null, 2)}\n`, "utf8")
 }
 
-// ── Ava Chat ───────────────────────────────────────────────────────
-export type AvaChatMessage = {
+// ── Chloe Chat (Command channel) ─────────────────────────────────
+export type ChloeChatMessage = {
   id: string
   timestamp: string
-  from: "user" | "ava"
+  from: "user" | "chloe"
   text: string
   status?: "pending" | "complete" | "error"
 }
 
-const avaChatPath = path.join(dataDir, "ava-chat.json")
+const chloeChatPath = path.join(dataDir, "chloe-chat.json")
 
-export async function readAvaChat() {
-  await ensureFile(avaChatPath, "[]\n")
-  const raw = await fs.readFile(avaChatPath, "utf8")
-  return JSON.parse(raw) as AvaChatMessage[]
+export async function readChloeChat() {
+  await ensureFile(chloeChatPath, "[]\n")
+  const raw = await fs.readFile(chloeChatPath, "utf8")
+  return JSON.parse(raw) as ChloeChatMessage[]
 }
 
-export async function writeAvaChat(messages: AvaChatMessage[]) {
-  await fs.writeFile(avaChatPath, `${JSON.stringify(messages, null, 2)}\n`, "utf8")
+export async function writeChloeChat(messages: ChloeChatMessage[]) {
+  await fs.writeFile(chloeChatPath, `${JSON.stringify(messages, null, 2)}\n`, "utf8")
 }
 
-export function createAvaChatMessage(
-  from: AvaChatMessage["from"],
+export function createChloeChatMessage(
+  from: ChloeChatMessage["from"],
   text: string,
-  status?: AvaChatMessage["status"],
-): AvaChatMessage {
+  status?: ChloeChatMessage["status"],
+): ChloeChatMessage {
   return {
     id: `msg-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
     timestamp: new Date().toISOString(),

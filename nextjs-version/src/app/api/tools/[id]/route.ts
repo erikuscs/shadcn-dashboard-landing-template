@@ -7,6 +7,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const payload = (await request.json()) as {
     state?: "Draft" | "Beta" | "Live";
     owner?: string;
+    run?: boolean;
   };
 
   const { id } = await params;
@@ -22,6 +23,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     ...previous,
     state: payload.state ?? previous.state,
     owner: payload.owner?.trim() || previous.owner,
+    lastRunAt: payload.run ? new Date().toISOString() : previous.lastRunAt,
   };
 
   tools[idx] = updated;
@@ -32,9 +34,15 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     logs.unshift(
       createLog(
         "info",
-        `Moved tool \"${updated.name}\" from ${previous.state} to ${updated.state}.`,
+        `Moved tool "${updated.name}" from ${previous.state} to ${updated.state}.`,
       ),
     );
+    await writeLogs(logs.slice(0, 200));
+  }
+
+  if (payload.run) {
+    const logs = await readLogs();
+    logs.unshift(createLog("info", `Tool "${updated.name}" triggered manually.`));
     await writeLogs(logs.slice(0, 200));
   }
 

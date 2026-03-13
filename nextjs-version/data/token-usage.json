@@ -1,290 +1,78 @@
 {
-  "updatedAt": "2026-03-09T16:38:00Z",
+  "updatedAt": "2026-03-13T00:00:00Z",
   "billingPeriod": "2026-03-01/2026-03-31",
   "budgetUsd": 1200.0,
   "records": [
     {
       "memberId": "agent-001",
-      "memberName": "Ava Sterling",
+      "memberName": "Chloe O'Brian",
       "department": "Command",
       "model": "claude-3-5-sonnet",
-      "tokensInputK": 2840,
-      "tokensOutputK": 980,
-      "costUsd": 23.22,
-      "sessions": 312,
-      "avgSessionTokens": 12243,
-      "primaryUseCase": "Staff routing, insight synthesis, email drafting",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Microsoft Teams",
-        "Outlook",
-        "Microsoft Graph API"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T14:20:00Z"
-    },
-    {
-      "memberId": "agent-002",
-      "memberName": "Marcus Vale",
-      "department": "Intelligence",
-      "model": "gpt-4o",
-      "tokensInputK": 3120,
-      "tokensOutputK": 1240,
-      "costUsd": 20.2,
-      "sessions": 188,
-      "avgSessionTokens": 23191,
-      "primaryUseCase": "Risk analysis, strategic roadmaps, 90-day engagement plans",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Risk Register",
-        "Prompt Studio"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T13:45:00Z"
-    },
-    {
-      "memberId": "agent-003",
-      "memberName": "Claire Donovan",
-      "department": "Operations",
-      "model": "gpt-4o",
-      "tokensInputK": 1680,
-      "tokensOutputK": 640,
-      "costUsd": 10.6,
-      "sessions": 142,
-      "avgSessionTokens": 16338,
-      "primaryUseCase": "Process design, operational briefs, team coordination",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Microsoft Teams"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T11:30:00Z"
-    },
-    {
-      "memberId": "agent-004",
-      "memberName": "Daniel Cho",
-      "department": "Finance",
-      "model": "gpt-4o",
-      "tokensInputK": 2240,
-      "tokensOutputK": 820,
-      "costUsd": 13.8,
-      "sessions": 96,
-      "avgSessionTokens": 32083,
-      "primaryUseCase": "Financial modeling, cost justification, margin analysis",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Outlook",
-        "Excel"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T10:15:00Z"
-    },
-    {
-      "memberId": "agent-005",
-      "memberName": "Riya Nair",
-      "department": "Intelligence",
-      "model": "gpt-4o",
-      "tokensInputK": 3480,
-      "tokensOutputK": 1100,
-      "costUsd": 19.7,
-      "sessions": 224,
-      "avgSessionTokens": 20446,
-      "primaryUseCase": "Regulatory signal monitoring, NERC/OSHA/CFATS compliance mapping",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Risk Register"
-      ],
-      "complianceFlag": "high_volume",
-      "lastActivity": "2026-03-09T15:10:00Z"
-    },
-    {
-      "memberId": "agent-006",
-      "memberName": "Theo Banks",
-      "department": "Client Success",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 1420,
-      "tokensOutputK": 580,
-      "costUsd": 0.56,
-      "sessions": 168,
-      "avgSessionTokens": 11905,
-      "primaryUseCase": "Client outreach, engagement coordination, relationship management",
+      "tokensInputK": 0,
+      "tokensOutputK": 0,
+      "costUsd": 0,
+      "sessions": 0,
+      "avgSessionTokens": 0,
+      "primaryUseCase": "Market research, client insight synthesis, outreach coordination",
       "toolsUsed": [
         "OpenClaw Mission Control",
         "Microsoft Teams",
         "Outlook"
       ],
-      "complianceFlag": "model_downgrade_suggested",
-      "lastActivity": "2026-03-09T14:00:00Z"
+      "complianceFlag": null,
+      "lastActivity": null
     },
     {
-      "memberId": "agent-007",
-      "memberName": "Priya Osei",
-      "department": "Intelligence",
+      "memberId": "agent-006",
+      "memberName": "Anika Rahman",
+      "department": "Risk",
       "model": "gpt-4o-mini",
-      "tokensInputK": 2100,
-      "tokensOutputK": 760,
-      "costUsd": 0.77,
-      "sessions": 196,
-      "avgSessionTokens": 14592,
-      "primaryUseCase": "Market signal scanning, sector research, pattern tagging",
+      "tokensInputK": 0,
+      "tokensOutputK": 0,
+      "costUsd": 0,
+      "sessions": 0,
+      "avgSessionTokens": 0,
+      "primaryUseCase": "Risk signal monitoring, vulnerability assessment, regulatory mapping",
       "toolsUsed": [
         "OpenClaw Mission Control",
-        "OpenBrowser"
+        "Risk Register"
       ],
       "complianceFlag": null,
-      "lastActivity": "2026-03-09T12:40:00Z"
-    },
-    {
-      "memberId": "agent-008",
-      "memberName": "Leon Marsh",
-      "department": "Delivery",
-      "model": "gpt-4o",
-      "tokensInputK": 2860,
-      "tokensOutputK": 920,
-      "costUsd": 16.35,
-      "sessions": 178,
-      "avgSessionTokens": 21348,
-      "primaryUseCase": "Site assessment reports, gap mapping, infrastructure documentation",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Risk Register",
-        "Trace Inspector"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T15:30:00Z"
+      "lastActivity": null
     },
     {
       "memberId": "agent-009",
-      "memberName": "Nina Cross",
-      "department": "Intelligence",
+      "memberName": "Elias Romero",
+      "department": "Analytics",
       "model": "gpt-4o",
-      "tokensInputK": 1960,
-      "tokensOutputK": 740,
-      "costUsd": 12.3,
-      "sessions": 112,
-      "avgSessionTokens": 24107,
-      "primaryUseCase": "KPI architecture, benchmark design, performance metric modeling",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Prompt Studio"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T13:00:00Z"
-    },
-    {
-      "memberId": "agent-010",
-      "memberName": "Sam Ford",
-      "department": "Client Success",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 980,
-      "tokensOutputK": 420,
-      "costUsd": 0.4,
-      "sessions": 88,
-      "avgSessionTokens": 15909,
-      "primaryUseCase": "Proposal writing, briefing decks, executive summaries",
-      "toolsUsed": [
-        "OpenClaw Mission Control",
-        "Outlook",
-        "Prompt Studio"
-      ],
-      "complianceFlag": null,
-      "lastActivity": "2026-03-09T11:00:00Z"
-    },
-    {
-      "memberId": "agent-011",
-      "memberName": "Zara Quinn",
-      "department": "Operations",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 1240,
-      "tokensOutputK": 480,
-      "costUsd": 0.47,
-      "sessions": 104,
-      "avgSessionTokens": 16538,
-      "primaryUseCase": "Process optimization analysis, workflow design, SOP drafting",
+      "tokensInputK": 0,
+      "tokensOutputK": 0,
+      "costUsd": 0,
+      "sessions": 0,
+      "avgSessionTokens": 0,
+      "primaryUseCase": "Fit and gap scoring, opportunity qualification",
       "toolsUsed": [
         "OpenClaw Mission Control"
       ],
       "complianceFlag": null,
-      "lastActivity": "2026-03-09T10:45:00Z"
+      "lastActivity": null
     },
     {
-      "memberId": "agent-012",
-      "memberName": "Eli Torres",
-      "department": "Platform",
-      "model": "gpt-4o",
-      "tokensInputK": 3640,
-      "tokensOutputK": 1480,
-      "costUsd": 23.9,
-      "sessions": 264,
-      "avgSessionTokens": 19394,
-      "primaryUseCase": "Platform development, API integrations, Azure deployment, dashboard maintenance",
+      "memberId": "agent-010",
+      "memberName": "Arjun Patel",
+      "department": "Infrastructure",
+      "model": "gpt-4o-mini",
+      "tokensInputK": 0,
+      "tokensOutputK": 0,
+      "costUsd": 0,
+      "sessions": 0,
+      "avgSessionTokens": 0,
+      "primaryUseCase": "DevOps, data integrity, pipeline maintenance",
       "toolsUsed": [
         "OpenClaw Mission Control",
-        "Microsoft Teams",
-        "GitHub Copilot",
-        "Trace Inspector"
+        "GitHub"
       ],
-      "complianceFlag": "high_volume",
-      "lastActivity": "2026-03-09T16:20:00Z"
-    },
-    {
-      "memberId": "agent-013",
-      "memberName": "Jordan Price",
-      "department": "Delivery",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 0,
-      "tokensOutputK": 0,
-      "costUsd": 0.0,
-      "sessions": 0,
-      "avgSessionTokens": 0,
-      "primaryUseCase": "Infrastructure documentation (not yet started \u2014 starts April 1)",
-      "toolsUsed": [],
-      "complianceFlag": "pending_onboard",
-      "lastActivity": null
-    },
-    {
-      "memberId": "agent-014",
-      "memberName": "Morgan Reyes",
-      "department": "Command",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 0,
-      "tokensOutputK": 0,
-      "costUsd": 0.0,
-      "sessions": 0,
-      "avgSessionTokens": 0,
-      "primaryUseCase": "Executive coordination (not yet started \u2014 starts April 1)",
-      "toolsUsed": [],
-      "complianceFlag": "pending_onboard",
-      "lastActivity": null
-    },
-    {
-      "memberId": "agent-015",
-      "memberName": "Casey Odum",
-      "department": "Intelligence",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 0,
-      "tokensOutputK": 0,
-      "costUsd": 0.0,
-      "sessions": 0,
-      "avgSessionTokens": 0,
-      "primaryUseCase": "Compliance monitoring (not yet started \u2014 starts April 7)",
-      "toolsUsed": [],
-      "complianceFlag": "pending_onboard",
-      "lastActivity": null
-    },
-    {
-      "memberId": "agent-016",
-      "memberName": "Drew Santos",
-      "department": "Platform",
-      "model": "gpt-4o-mini",
-      "tokensInputK": 0,
-      "tokensOutputK": 0,
-      "costUsd": 0.0,
-      "sessions": 0,
-      "avgSessionTokens": 0,
-      "primaryUseCase": "Platform support (not yet started \u2014 starts April 7)",
-      "toolsUsed": [],
-      "complianceFlag": "pending_onboard",
+      "complianceFlag": null,
       "lastActivity": null
     }
   ]

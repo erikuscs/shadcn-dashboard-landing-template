@@ -111,10 +111,10 @@ export const mails = [
   },
   {
     id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-    name: "Ava Taylor",
-    email: "avataylor@example.com",
+    name: "Alex Turner",
+    email: "alexturner@example.com",
     subject: "Re: Meeting Agenda",
-    text: "Here's the agenda for our meeting next week. I've included all the topics we need to cover, as well as time allocations for each.\n\nIf you have any additional items to discuss or any specific points to address, please let me know, and we can integrate them into the agenda.\n\nIt's essential that our meeting is productive and addresses all relevant matters.\n\nLooking forward to our meeting! Ava",
+    text: "Here's the agenda for our meeting next week. I've included all the topics we need to cover, as well as time allocations for each.\n\nIf you have any additional items to discuss or any specific points to address, please let me know, and we can integrate them into the agenda.\n\nIt's essential that our meeting is productive and addresses all relevant matters.\n\nLooking forward to our meeting! Alex",
     date: "2022-10-10T10:45:00",
     read: true,
     labels: ["meeting", "work"],
@@ -232,8 +232,8 @@ export const contacts = [
     email: "noah.martinez@example.com",
   },
   {
-    name: "Ava Taylor",
-    email: "ava.taylor@example.com",
+    name: "Alex Turner",
+    email: "alex.turner@example.com",
   },
   {
     name: "Lucas Brown",

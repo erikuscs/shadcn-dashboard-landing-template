@@ -17,9 +17,9 @@ const INTELLIGENCE_FLOW = `flowchart TD
     C -->|Regulatory| D[Regulatory Queue]
     C -->|Threat| E[Threat Queue]
     C -->|Market| F[Market Queue]
-    D & E & F --> G[Intelligence Review\nMarcus Vale]
+    D & E & F --> G[Intelligence Review\nAnika Rahman]
     G --> H{Severity?}
-    H -->|Critical/High| I[🔴 Escalation Queue\nAva Sterling]
+    H -->|Critical/High| I[🔴 Escalation Queue\nChloe O'Brian]
     H -->|Medium/Low| J[📋 Risk Register]
     I --> K[Erik Herring\nDecision Required]
     K --> L[Decision Logged]
@@ -39,15 +39,15 @@ const ENGAGEMENT_PROCESS = `flowchart LR
     A([🎯 Prospect Identified]) --> B[CRM — Fit Score]
     B --> C{Score ≥ 60?}
     C -->|No| D[Monitor / Nurture]
-    C -->|Yes| E[Outreach\nTheo Banks]
+    C -->|Yes| E[Outreach\nChloe O'Brian]
     E --> F[Discovery Call]
-    F --> G[Site Assessment\nLeon Marsh]
+    F --> G[Site Assessment\nElias Romero]
     G --> H[Gap Analysis Report]
-    H --> I[Proposal\nSam Ford]
+    H --> I[Proposal\nElias Romero]
     I --> J{Approved?}
     J -->|No| K[Revise / Archive]
     J -->|Yes| L[Contract Signed]
-    L --> M[Engagement Active\nSofia / Marcus]
+    L --> M[Engagement Active\nChloe / Anika]
     M --> N[90-Day Hardening]
     N --> O[Deliverables]
     O --> P{Extension?}
@@ -64,7 +64,7 @@ const DATACENTER_WAVE = `flowchart TD
     C --> D[Regulatory Mapping\nFedRAMP · SOC2 · NIST]
     D --> E[CRM Outreach]
     E --> F{Decision Maker\nIdentified?}
-    F -->|No| G[LinkedIn Research\nCasey / Priya]
+    F -->|No| G[LinkedIn Research\nChloe O'Brian]
     G --> F
     F -->|Yes| H[Engagement Pathway]
     H --> I[Physical Security\nAssessment]
@@ -125,10 +125,10 @@ const TECH_STACK = `flowchart TD
     subgraph Integrations["🔗 Integrations"]
         E[Microsoft Graph\nMail.Send]
         F[Telegram Bot API\nAlerts]
-        G[Ava Pipeline\nDaemon PID]
+        G[SG Pipeline\nDaemon PID]
     end
     subgraph Identity["🔐 Azure AD"]
-        H[App Registration\nAva Sterling]
+        H[App Registration\nChloe O'Brian]
     end
     A -->|HTTPS| B
     B --> C
@@ -386,7 +386,7 @@ export default function DiagramsPage() {
           <Card>
             <CardHeader>
               <CardTitle>Platform Architecture</CardTitle>
-              <CardDescription>Mission Control infrastructure — Next.js on Azure, Ava pipeline, M365 Graph, and Telegram integrations.</CardDescription>
+              <CardDescription>Mission Control infrastructure — Next.js on Azure, SG pipeline, M365 Graph, and Telegram integrations.</CardDescription>
             </CardHeader>
             <CardContent>
               <MermaidDiagram chart={TECH_STACK} />

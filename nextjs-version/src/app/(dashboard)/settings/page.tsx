@@ -58,7 +58,7 @@ export default function SettingsPage() {
                 <div className="space-y-1.5">
                   <label className="text-sm font-medium">Your Name</label>
                   <Input
-                    placeholder="e.g. Ava Sterling"
+                    placeholder="e.g. Chloe O'Brian"
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     required
